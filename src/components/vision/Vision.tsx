@@ -1,0 +1,132 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+import { Sparkles } from "lucide-react";
+import { Container } from "@/components/ui";
+import { LogoMark } from "@/components/brand/LogoMark";
+import { duration, fadeUp, viewport } from "@/lib/motion";
+
+const pillars = ["Ideate", "Innovate", "Create", "Scale", "Impact"];
+
+export function Vision() {
+  const reduce = useReducedMotion();
+
+  return (
+    <section
+      id="vision"
+      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e4eaf4] to-[#cfd6e4] py-28 sm:py-36 lg:py-48 border-t border-[#b8c4d6]/60 text-center"
+    >
+      {/* Dramatic Cosmic & Orbital Metallic Lighting */}
+      <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
+        {/* Specular Central Chrome Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[750px] w-[950px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
+        
+        {/* Orbital Precision Rings */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative h-[650px] w-[650px] sm:h-[800px] sm:w-[800px] rounded-full border border-[#9eaec4]/35">
+            <div className="absolute inset-16 rounded-full border border-[#9eaec4]/25 border-dashed animate-[spin_180s_linear_infinite]" />
+            <div className="absolute inset-32 rounded-full border border-[#9eaec4]/20" />
+          </div>
+        </div>
+
+        {/* Subtle grid */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `radial-gradient(rgba(20, 30, 50, 0.4) 1px, transparent 1px)`,
+            backgroundSize: "48px 48px",
+          }}
+        />
+
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8fa0b8]/40 to-transparent" />
+      </div>
+
+      <Container className="relative z-10">
+        {/* Eyebrow */}
+        <motion.div
+          variants={fadeUp}
+          initial={reduce ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={viewport}
+          transition={{ duration: duration.base, ease: "easeOut" }}
+          className="metallic-badge inline-flex items-center gap-2 rounded-full px-4 py-1.5 backdrop-blur-md"
+        >
+          <Sparkles className="h-3.5 w-3.5 text-metal" />
+          <span className="text-[11px] font-bold uppercase tracking-[0.32em] text-black">
+            OUR VISION
+          </span>
+        </motion.div>
+
+        {/* Dramatic Main Headline */}
+        <motion.h2
+          variants={fadeUp}
+          initial={reduce ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={viewport}
+          transition={{ duration: duration.slow, delay: 0.1, ease: "easeOut" }}
+          className="mt-8 mx-auto max-w-5xl font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight text-black"
+        >
+          Building the Future of FMCG Innovation
+        </motion.h2>
+
+        {/* Pillar Sequence: "Ideate. Innovate. Create. Scale. Impact." */}
+        <motion.div
+          variants={fadeUp}
+          initial={reduce ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={viewport}
+          transition={{ duration: duration.base, delay: 0.2, ease: "easeOut" }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+        >
+          {pillars.map((pillar, idx) => (
+            <div key={pillar} className="flex items-center gap-3 sm:gap-4">
+              <span className="metallic-card rounded-full px-4 py-1.5 font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.24em] text-black shadow-[0_2px_10px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-[#7b8ea8] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+                {pillar}
+              </span>
+              {idx < pillars.length - 1 && (
+                <span className="h-1 w-1 rounded-full bg-black/40" />
+              )}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Dramatic Statement Monolith */}
+        <motion.div
+          variants={fadeUp}
+          initial={reduce ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={viewport}
+          transition={{ duration: duration.slow, delay: 0.3, ease: "easeOut" }}
+          className="mt-16 sm:mt-20 mx-auto max-w-4xl"
+        >
+          <div className="group relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-8 sm:p-14 backdrop-blur-2xl shadow-[0_20px_60px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff]">
+            {/* Top Glowing Indicator */}
+            <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
+
+            {/* Background Watermark Logo */}
+            <div className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 opacity-[0.04] transition-opacity duration-500 group-hover:opacity-[0.07]">
+              <LogoMark className="h-64 w-64 text-black" />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#4d5666]">
+                Vision
+              </span>
+
+              {/* Exact Vision Statement */}
+              <p className="mt-6 font-serif text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed tracking-tight text-black max-w-3xl">
+                &ldquo;To become a globally recognized FMCG innovation and commercialization partner delivering next-generation food systems for modern consumers.&rdquo;
+              </p>
+
+              <div className="mt-8 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-[#4d5666] uppercase">
+                <span>Sarvsmit Global Enterprise</span>
+                <span className="h-1 w-1 rounded-full bg-black/40" />
+                <span>Global Reach</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </Container>
+    </section>
+  );
+}
