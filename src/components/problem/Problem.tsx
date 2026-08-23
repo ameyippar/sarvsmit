@@ -1,20 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  AlertTriangle,
-  Clock,
-  RotateCcw,
-  TrendingDown,
-  Activity,
-  Layers,
-  Sparkles,
-  ShieldAlert,
-  ArrowDownRight,
-  ArrowRight,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui";
 import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 
@@ -24,56 +13,49 @@ const failurePoints = [
     title: "Weak product differentiation",
     category: "Market Positioning",
     severity: "High Risk",
-    impact: "Blends into crowded retail shelves without distinct sensory whitespace.",
-    icon: Sparkles,
+    impact: "Blends into crowded retail shelves without distinct sensory whitespace or competitive formulation advantage.",
   },
   {
     number: "02",
     title: "Scaling formulations",
     category: "R&D & Kitchen-to-Plant",
     severity: "Critical",
-    impact: "Kitchen-bench recipes collapse under industrial shear, continuous heat, and pressure.",
-    icon: Layers,
+    impact: "Kitchen-bench recipes collapse under industrial shear, continuous thermal loads, and commercial extruder pressure.",
   },
   {
     number: "03",
     title: "Manufacturing inefficiencies",
     category: "Plant Operations",
     severity: "Operational",
-    impact: "Excessive line downtime, batch yield losses, and slow throughput rates.",
-    icon: Activity,
+    impact: "Excessive line downtime, batch yield losses, slow throughput rates, and co-packer commissioning friction.",
   },
   {
     number: "04",
     title: "Shelf-life instability",
     category: "Quality & Preservation",
     severity: "Critical",
-    impact: "Moisture migration, rancidity, and flavor staling before retail sell-through.",
-    icon: ShieldAlert,
+    impact: "Moisture migration, lipid rancidity, and flavor staling before achieving full retail supply chain sell-through.",
   },
   {
     number: "05",
     title: "Poor commercialization planning",
     category: "Go-To-Market",
     severity: "Strategic",
-    impact: "Fragmented co-packer handoffs and missed distributor launch windows.",
-    icon: ArrowDownRight,
+    impact: "Fragmented co-packer handoffs, regulatory non-compliance, and missed distributor listing windows.",
   },
   {
     number: "06",
     title: "Margin pressure",
     category: "Unit Economics",
     severity: "Financial",
-    impact: "Over-formulation and high raw material COGS eliminating channel profitability.",
-    icon: TrendingDown,
+    impact: "Over-engineered ingredient specs and un-optimized bill-of-materials eliminating distributor margins.",
   },
   {
     number: "07",
     title: "Supplier inconsistency",
     category: "Supply Chain",
     severity: "Structural",
-    impact: "Raw ingredient batch variation altering final taste, snap, and texture.",
-    icon: AlertTriangle,
+    impact: "Raw ingredient batch variation altering final viscosity, bake snap, mouthfeel, and consumer sensory score.",
   },
 ];
 
@@ -81,28 +63,24 @@ const consequences = [
   {
     number: "01",
     title: "Delayed launches",
-    icon: Clock,
     badge: "Timeline Risk",
     description: "Extended formulation cycles cause missed seasonal and retail shelf windows.",
   },
   {
     number: "02",
     title: "Poor repeat purchase",
-    icon: RotateCcw,
     badge: "Consumer Retention",
     description: "Sensory defects and texture degradation erode customer lifetime value.",
   },
   {
     number: "03",
     title: "Operational inefficiencies",
-    icon: Activity,
     badge: "Process Waste",
     description: "Sub-optimal line kinetics trigger high scrap rates and wasted capex.",
   },
   {
     number: "04",
     title: "Unsustainable unit economics",
-    icon: TrendingDown,
     badge: "Financial Strain",
     description: "Uncontrolled ingredient COGS undermine distributor margins and scale.",
   },
@@ -125,8 +103,20 @@ export function Problem() {
       id="problem"
       className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e5ebf3] to-[#d8dfeb] py-24 sm:py-32 lg:py-36 border-t border-[#b8c4d6]/60"
     >
-      {/* Background Lighting & Metallic Texture */}
+      {/* Background Lighting, Manufacturing Imagery & Metallic Texture */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
+        {/* Fading Industrial Manufacturing Plant Background */}
+        <div className="absolute inset-0 opacity-[0.10] mix-blend-multiply">
+          <Image
+            src="/images/manufacturing-line.jpg"
+            alt="FMCG Manufacturing Line Background"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority={false}
+          />
+        </div>
+
         <div className="absolute top-[10%] right-[-5%] h-[650px] w-[650px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
         <div className="absolute bottom-[10%] -left-[10%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(220,38,38,0.06),transparent_70%)] blur-3xl" />
 
@@ -144,7 +134,7 @@ export function Problem() {
 
       <Container className="relative z-10">
         {/* ========================================================= */}
-        {/* Section Header with Context & Diagnostic Stat Box */}
+        {/* Editorial Diagnostic Header & Benchmark Monolith */}
         {/* ========================================================= */}
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 items-end">
           <div className="lg:col-span-8">
@@ -154,11 +144,14 @@ export function Problem() {
               whileInView="visible"
               viewport={viewport}
               transition={{ duration: duration.base, ease }}
-              className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm border-red-400/50 shadow-sm"
+              className="flex items-center gap-3 border-b border-red-300/60 pb-3"
             >
-              <AlertTriangle className="h-3 w-3 text-red-600" />
-              <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-red-700">
-                The Scaling Bottleneck
+              <span className="font-mono text-xs font-bold tracking-[0.24em] text-red-700 uppercase">
+                {"//"} 02 · COMMERCIAL DIAGNOSTIC
+              </span>
+              <span className="h-px flex-1 bg-gradient-to-r from-red-400/40 to-transparent" />
+              <span className="text-[10.5px] font-mono tracking-widest text-[#556072] uppercase hidden sm:inline">
+                SCALE BOTTLENECKS &amp; FRICTION VECTORS
               </span>
             </motion.div>
 
@@ -179,7 +172,7 @@ export function Problem() {
               whileInView="visible"
               viewport={viewport}
               transition={{ duration: duration.base, delay: 0.15, ease }}
-              className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-graphite/90 font-normal"
+              className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-graphite/90 font-normal font-sans"
             >
               Bridging the gap between kitchen concepts and factory-floor realities. Without systematic formulation science and process engineering, standard brands encounter 7 predictable friction points.
             </motion.p>
@@ -196,7 +189,7 @@ export function Problem() {
           >
             <div className="rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-6 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,25,35,0.06),inset_0_1px_1px_#ffffff]">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
                   Industry Diagnostic
                 </span>
                 <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse" />
@@ -221,8 +214,8 @@ export function Problem() {
         {/* ========================================================= */}
         <div className="mt-14 sm:mt-18">
           <div className="mb-6 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="font-mono text-xs font-bold text-red-700">01 — 07</span>
+            <div className="flex items-center gap-2 font-mono">
+              <span className="text-xs font-bold text-red-700">01 — 07</span>
               <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#4d5666]">
                 Critical Friction Points
               </span>
@@ -238,7 +231,6 @@ export function Problem() {
             className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {failurePoints.map((item, index) => {
-              const Icon = item.icon;
               const isHovered = hoveredIndex === index;
 
               return (
@@ -266,31 +258,19 @@ export function Problem() {
                   />
 
                   <div>
-                    {/* Top Row: Index + Icon + Risk Tag */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div
-                          className={`flex h-9 w-9 items-center justify-center rounded-lg border transition-all duration-300 ${
-                            isHovered
-                              ? "border-red-400/70 bg-red-50 text-red-600 shadow-[0_2px_8px_rgba(220,38,38,0.15)]"
-                              : "border-[#b8c4d6] bg-white/80 text-graphite shadow-[inset_0_1px_0_#ffffff]"
-                          }`}
-                        >
-                          <Icon className="h-4.5 w-4.5" />
-                        </div>
-                        <span className="font-mono text-xs font-bold text-[#5c6778]">
-                          {item.number}
-                        </span>
-                      </div>
-
-                      <span className="rounded-full border border-red-300/60 bg-red-50/70 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-red-700">
+                    {/* Top Row: Index + Risk Tag */}
+                    <div className="flex items-center justify-between border-b border-[#b8c2d1]/40 pb-3">
+                      <span className="font-mono text-xs font-bold text-black">
+                        {item.number}
+                      </span>
+                      <span className="rounded-full border border-red-300/70 bg-red-50/80 px-2 py-0.5 text-[9px] font-mono font-bold uppercase tracking-wider text-red-700">
                         {item.severity}
                       </span>
                     </div>
 
                     {/* Category & Title */}
                     <div className="mt-5">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                      <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#556072]">
                         {item.category}
                       </span>
                       <h3 className="mt-1 font-serif text-xl sm:text-[22px] font-bold leading-tight text-black transition-colors duration-200">
@@ -322,7 +302,7 @@ export function Problem() {
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <span className="h-2.5 w-2.5 rounded-full bg-red-600 animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-black">
                 The Downstream Consequences
               </span>
             </div>
@@ -337,7 +317,6 @@ export function Problem() {
             className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             {consequences.map((item) => {
-              const Icon = item.icon;
               return (
                 <motion.div
                   key={item.title}
@@ -345,20 +324,17 @@ export function Problem() {
                   transition={{ duration: duration.base, ease }}
                   className="metallic-card group relative overflow-hidden rounded-xl border-red-300/60 p-6 backdrop-blur-sm transition-all duration-300 hover:border-red-400/90 hover:shadow-[0_15px_35px_rgba(20,25,35,0.09)] hover:translate-y-[-3px]"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-red-300/80 bg-red-50 text-red-600 shadow-[0_2px_8px_rgba(220,38,38,0.12)]">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.16em] text-red-700">
+                  <div className="flex items-center justify-between border-b border-red-200/60 pb-3">
+                    <span className="font-mono text-xs font-bold text-red-700">
+                      {item.number}
+                    </span>
+                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[9.5px] font-mono font-bold uppercase tracking-[0.14em] text-red-700">
                       {item.badge}
                     </span>
                   </div>
 
-                  <div className="mt-6">
-                    <span className="font-mono text-[10px] font-bold text-[#5c6778]">
-                      CONSEQUENCE {item.number}
-                    </span>
-                    <h4 className="mt-1 font-serif text-xl sm:text-2xl font-bold tracking-tight text-black">
+                  <div className="mt-5">
+                    <h4 className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-black">
                       {item.title}
                     </h4>
                     <p className="mt-2.5 text-xs text-[#495362] leading-relaxed font-medium">
@@ -385,8 +361,8 @@ export function Problem() {
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#556072]">
-                    How Sarvsmit De-Risks Scale
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-[#556072]">
+                    De-Risking Commercial Scale
                   </span>
                   <p className="mt-0.5 font-serif text-xl sm:text-2xl font-bold text-black">
                     Engineered through science. Validated across 6 commercial viability gates.

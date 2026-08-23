@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { Button, Container } from "@/components/ui";
@@ -39,8 +40,20 @@ export function Hero() {
       id="home"
       className="relative min-h-[100svh] overflow-hidden bg-gradient-to-b from-[#f8f9fb] via-[#e6ebf2] to-[#d6dce6] pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-24 flex items-center"
     >
-      {/* Background Lighting & Metallic Grey Grid Effects */}
+      {/* Background Lighting & Atmospheric Laboratory Texture */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
+        {/* Fading High-End Pilot R&D Laboratory Background */}
+        <div className="absolute inset-0 opacity-[0.09] mix-blend-multiply">
+          <Image
+            src="/images/hero-lab.jpg"
+            alt="Food Science Laboratory Pilot Facility"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority={true}
+          />
+        </div>
+
         {/* Luminous Specular Radial Glows */}
         <div className="absolute -top-[10%] right-[10%] h-[550px] w-[550px] sm:h-[750px] sm:w-[750px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
         <div className="absolute top-[30%] -left-[10%] h-[450px] w-[450px] sm:h-[650px] sm:w-[650px] rounded-full bg-[radial-gradient(circle_at_center,rgba(195,205,220,0.5),transparent_70%)] blur-3xl" />
@@ -74,7 +87,7 @@ export function Hero() {
         <div className="grid items-center justify-items-center lg:justify-items-stretch gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Main Hero Content (Left 7-8 cols on large screens) */}
           <div className="w-full lg:col-span-7 xl:col-span-8 text-left">
-            {/* Top Positioning Badge */}
+            {/* Top Positioning Header Line */}
             <div className="flex justify-start">
               <motion.div
                 initial={reduce ? false : { opacity: 0, y: 14 }}
@@ -125,7 +138,7 @@ export function Hero() {
               initial={reduce ? false : { opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: duration.base, delay: 0.22, ease }}
-              className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-graphite/90 font-normal"
+              className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-graphite/90 font-normal font-sans"
             >
               {site.supportingCopy}
             </motion.p>
@@ -228,7 +241,7 @@ export function Hero() {
                 </div>
 
                 {/* Micro Metrics / Highlights */}
-                <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2 sm:gap-3 border-t border-[#b8c2d1]/60 pt-4 sm:pt-5 text-left">
+                <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2.5 sm:gap-3 border-t border-[#b8c2d1]/60 pt-4 sm:pt-5 text-left">
                   <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#556072] font-bold">Formulation</span>
                     <p className="mt-0.5 text-[10.5px] sm:text-xs font-bold text-black">R&D to Scale</p>
