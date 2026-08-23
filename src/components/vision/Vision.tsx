@@ -22,10 +22,10 @@ export function Vision() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] sm:h-[750px] sm:w-[950px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
         
         {/* Orbital Precision Rings */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block">
-          <div className="relative h-[650px] w-[650px] sm:h-[800px] sm:w-[800px] rounded-full border border-[#9eaec4]/35">
-            <div className="absolute inset-16 rounded-full border border-[#9eaec4]/25 border-dashed animate-[spin_180s_linear_infinite]" />
-            <div className="absolute inset-32 rounded-full border border-[#9eaec4]/20" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative h-[340px] w-[340px] sm:h-[650px] sm:w-[650px] md:h-[800px] md:w-[800px] rounded-full border border-[#9eaec4]/35">
+            <div className="absolute inset-8 sm:inset-16 rounded-full border border-[#9eaec4]/25 border-dashed animate-[spin_180s_linear_infinite]" />
+            <div className="absolute inset-16 sm:inset-32 rounded-full border border-[#9eaec4]/20" />
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export function Vision() {
           ))}
         </motion.div>
 
-        {/* Dramatic Statement Monolith */}
+        {/* Dramatic Statement Monolith with Prominent Central Logo */}
         <motion.div
           variants={fadeUp}
           initial={reduce ? "visible" : "hidden"}
@@ -103,18 +103,18 @@ export function Vision() {
             {/* Top Glowing Indicator */}
             <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
-            {/* Background Watermark Logo */}
-            <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 opacity-[0.03] transition-opacity duration-500 group-hover:opacity-[0.06] hidden sm:block">
-              <LogoMark className="h-48 w-48 sm:h-64 sm:w-64 text-black" />
-            </div>
-
             <div className="relative z-10 flex flex-col items-center">
+              {/* Prominent Central 3D Chrome Sarvsmit Emblem */}
+              <div className="mb-5 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full border border-[#a8b6cb] bg-gradient-to-br from-white via-[#dde4f0] to-[#b6c2d4] p-3.5 shadow-[0_10px_30px_rgba(20,25,35,0.12),inset_0_2px_4px_#ffffff]">
+                <LogoMark className="h-full w-full drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]" />
+              </div>
+
               <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.3em] text-[#4d5666]">
                 Vision
               </span>
 
               {/* Exact Vision Statement */}
-              <p className="mt-4 sm:mt-6 font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed tracking-tight text-black max-w-3xl">
+              <p className="mt-4 sm:mt-5 font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed tracking-tight text-black max-w-3xl">
                 &ldquo;To become a globally recognized FMCG innovation and commercialization partner delivering next-generation food systems for modern consumers.&rdquo;
               </p>
 

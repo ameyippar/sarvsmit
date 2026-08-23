@@ -73,7 +73,19 @@ export function Hero() {
       <Container className="relative z-10 w-full">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Main Hero Content (Left 7-8 cols on large screens) */}
-          <div className="lg:col-span-7 xl:col-span-8">
+          <div className="lg:col-span-7 xl:col-span-8 text-left">
+            {/* Mobile Centered 3D Chrome Emblem Showcase */}
+            <div className="flex justify-center lg:hidden mb-6">
+              <motion.div
+                initial={reduce ? false : { opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: duration.base, ease }}
+                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-[#a8b6cb] bg-gradient-to-br from-white via-[#dde4f0] to-[#b6c2d4] p-3.5 shadow-[0_10px_30px_rgba(20,25,35,0.15),inset_0_2px_4px_#ffffff]"
+              >
+                <LogoMark className="h-full w-full drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)]" />
+              </motion.div>
+            </div>
+
             {/* Top Positioning Badge */}
             <motion.div
               initial={reduce ? false : { opacity: 0, y: 14 }}
@@ -193,7 +205,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Visual Chrome Emblem Showcase */}
+          {/* Right Visual Chrome Emblem Showcase (Desktop & Tablet) */}
           <motion.div
             initial={reduce ? false : { opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -205,7 +217,7 @@ export function Hero() {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white via-[#b8c6dc]/40 to-transparent blur-2xl -z-10" />
               
               {/* Brushed Metallic Glass Frame */}
-              <div className="relative w-full rounded-2xl border border-[#b8c4d6] bg-gradient-to-b from-white/95 via-[#ebf0f7] to-[#d3dce8] p-6 sm:p-8 md:p-10 backdrop-blur-xl shadow-[0_20px_50px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff] text-center">
+              <div className="relative w-full rounded-2xl border border-[#b8c4d6] bg-gradient-to-b from-white/95 via-[#ebf0f8] to-[#d3dce8] p-6 sm:p-8 md:p-10 backdrop-blur-xl shadow-[0_20px_50px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff] text-center">
                 {/* 3D Chrome Emblem with subtle float */}
                 <motion.div
                   animate={reduce ? undefined : { y: [-5, 5, -5] }}
