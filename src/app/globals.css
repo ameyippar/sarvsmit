@@ -16,8 +16,8 @@
   --focus: #13151b;
   --radius: 4px;
   --container: 80rem;
-  --header-h: 4.5rem;
-  --gutter: 1.25rem;
+  --header-h: 4rem;
+  --gutter: 1rem;
 }
 
 @theme inline {
@@ -43,6 +43,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h);
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +55,8 @@ body {
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -128,13 +131,13 @@ h4 {
 
 @media (min-width: 640px) {
   :root {
-    --gutter: 2rem;
+    --gutter: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --gutter: 3rem;
+    --gutter: 2.5rem;
   }
 }
 

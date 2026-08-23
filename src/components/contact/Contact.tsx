@@ -98,7 +98,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e6ebf2] to-[#ced6e4] pt-24 pb-24 sm:pt-32 sm:pb-32 lg:pt-40 lg:pb-40 border-t border-[#b8c4d6]/60"
+      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e6ebf2] to-[#ced6e4] pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-36 lg:pb-36 border-t border-[#b8c4d6]/60"
     >
       {/* Background Lighting */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
@@ -126,33 +126,33 @@ export function Contact() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.base, ease }}
-          className="relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d4dce8] p-8 sm:p-14 lg:p-16 backdrop-blur-2xl shadow-[0_20px_50px_rgba(20,25,35,0.08),inset_0_1px_1px_#ffffff] text-center"
+          className="relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d4dce8] p-6 sm:p-10 lg:p-16 backdrop-blur-2xl shadow-[0_20px_50px_rgba(20,25,35,0.08),inset_0_1px_1px_#ffffff] text-center"
         >
           <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
           <div className="mx-auto max-w-4xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.32em] text-black">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-black">
               Start Your Innovation Journey
             </span>
 
             {/* Headline */}
-            <h2 className="mt-6 font-serif text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.08] tracking-tight text-black">
+            <h2 className="mt-5 sm:mt-6 font-serif text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight text-black">
               Let’s Build the Next Great FMCG Product
             </h2>
 
             {/* Exact Text */}
-            <div className="mt-6 text-base sm:text-xl font-normal font-sans leading-relaxed text-graphite/90">
+            <div className="mt-5 sm:mt-6 text-sm sm:text-base md:text-lg font-normal font-sans leading-relaxed text-graphite/90">
               <p>Built Through Science.</p>
               <p>Scaled Through Innovation.</p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
               <Button
                 href="#contact-form-block"
                 variant="primary"
                 onClick={handleSmoothScrollToContact}
-                className="w-full sm:w-auto px-8 py-4 text-xs font-semibold tracking-[0.22em] shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
+                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] shadow-[0_4px_16px_rgba(0,0,0,0.15)] justify-center"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="ml-2 h-4 w-4" />
@@ -161,7 +161,7 @@ export function Contact() {
               <Button
                 href="tel:+919272417391"
                 variant="secondary"
-                className="w-full sm:w-auto px-8 py-4 text-xs font-semibold tracking-[0.22em] border-[#aab5c6] bg-white/70 shadow-[inset_0_1px_0_#ffffff] hover:bg-white"
+                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] border-[#aab5c6] bg-white/70 shadow-[inset_0_1px_0_#ffffff] hover:bg-white justify-center"
               >
                 <Phone className="mr-2 h-3.5 w-3.5 text-black" />
                 <span>Talk to Sarvsmit</span>
@@ -173,8 +173,8 @@ export function Contact() {
         {/* ========================================================= */}
         {/* Contact Information & Enquiry Form Block */}
         {/* ========================================================= */}
-        <div id="contact-form-block" className="mt-24 sm:mt-32 scroll-mt-24">
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-start">
+        <div id="contact-form-block" className="mt-16 sm:mt-24 lg:mt-32 scroll-mt-20">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16 items-start">
             {/* Left Column: Direct Contact Info */}
             <motion.div
               variants={fadeUp}
@@ -186,35 +186,35 @@ export function Contact() {
             >
               <div className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm">
                 <Sparkles className="h-3 w-3 text-metal" />
-                <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
+                <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
                   Direct Inquiries
                 </span>
               </div>
 
               {/* Heading */}
-              <h3 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl font-medium leading-[1.12] tracking-tight text-black">
+              <h3 className="mt-5 sm:mt-6 font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.12] tracking-tight text-black">
                 Let’s Build Something Great
               </h3>
 
-              <p className="mt-6 text-base leading-relaxed text-graphite/90">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-graphite/90 font-normal">
                 Whether you are formulating a new category entrant or optimizing an existing commercial manufacturing pipeline, our team is ready to collaborate.
               </p>
 
               {/* Contact Links */}
-              <div className="mt-10 space-y-4">
+              <div className="mt-8 sm:mt-10 space-y-3 sm:space-y-4">
                 {/* Email */}
                 <a
                   href="mailto:info@sarvsmitglobalenterprise.com"
-                  className="metallic-card group flex items-start gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
+                  className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
                     <Mail className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
                       Email
                     </span>
-                    <p className="mt-0.5 text-sm sm:text-base font-medium text-black transition-colors break-all">
+                    <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors break-all">
                       info@sarvsmitglobalenterprise.com
                     </p>
                   </div>
@@ -223,16 +223,16 @@ export function Contact() {
                 {/* Phone */}
                 <a
                   href="tel:+919272417391"
-                  className="metallic-card group flex items-start gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
+                  className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
                     <Phone className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
                       Phone
                     </span>
-                    <p className="mt-0.5 text-sm sm:text-base font-medium text-black transition-colors">
+                    <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors">
                       +91-9272417391
                     </p>
                   </div>
@@ -243,16 +243,16 @@ export function Contact() {
                   href="https://sarvsmitglobalenterprise.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="metallic-card group flex items-start gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
+                  className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
                     <Globe className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
                       Website
                     </span>
-                    <p className="mt-0.5 text-sm sm:text-base font-medium text-black transition-colors">
+                    <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors">
                       sarvsmitglobalenterprise.com
                     </p>
                   </div>
@@ -269,20 +269,20 @@ export function Contact() {
               transition={{ duration: duration.base, delay: 0.15, ease }}
               className="lg:col-span-7"
             >
-              <div className="relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d6dde8] p-7 sm:p-10 backdrop-blur-xl shadow-[0_15px_40px_rgba(20,25,35,0.08),inset_0_1px_1px_#ffffff]">
+              <div className="relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d6dde8] p-5 sm:p-8 lg:p-10 backdrop-blur-xl shadow-[0_15px_40px_rgba(20,25,35,0.08),inset_0_1px_1px_#ffffff]">
                 {submitted ? (
-                  <div className="py-12 text-center">
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-600">
-                      <CheckCircle2 className="h-8 w-8" />
+                  <div className="py-10 sm:py-12 text-center">
+                    <div className="mx-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-600">
+                      <CheckCircle2 className="h-7 w-7 sm:h-8 sm:w-8" />
                     </div>
-                    <h4 className="mt-6 font-serif text-2xl sm:text-3xl font-bold text-black">
+                    <h4 className="mt-5 sm:mt-6 font-serif text-xl sm:text-2xl md:text-3xl font-bold text-black">
                       Enquiry Details Captured
                     </h4>
-                    <p className="mt-3 max-w-md mx-auto text-sm text-graphite/90">
+                    <p className="mt-2.5 sm:mt-3 max-w-md mx-auto text-xs sm:text-sm text-graphite/90">
                       Thank you, <span className="text-black font-semibold">{formData.name}</span>. Your project requirement has been prepared. You can also reach us directly at{" "}
                       <a
                         href={`mailto:info@sarvsmitglobalenterprise.com?subject=Enquiry from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Company: ${formData.company}\nPhone: ${formData.phone}\nRequirement: ${formData.requirement}\nMessage: ${formData.message}`)}`}
-                        className="text-black font-semibold underline hover:text-black/80"
+                        className="text-black font-semibold underline hover:text-black/80 break-all"
                       >
                         info@sarvsmitglobalenterprise.com
                       </a>
@@ -291,14 +291,14 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="mt-8 text-xs uppercase tracking-[0.2em] text-[#4d5666] hover:text-black transition-colors font-semibold"
+                      className="mt-6 sm:mt-8 text-xs uppercase tracking-[0.2em] text-[#4d5666] hover:text-black transition-colors font-semibold"
                     >
                       Submit Another Enquiry
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} noValidate className="space-y-6">
-                    <div className="grid gap-6 sm:grid-cols-2">
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-6">
+                    <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                       {/* Name */}
                       <Input
                         id="name"
@@ -378,7 +378,7 @@ export function Contact() {
                       <Button
                         type="submit"
                         variant="primary"
-                        className="w-full sm:w-auto px-10 py-4 text-xs font-semibold tracking-[0.22em] justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
+                        className="w-full sm:w-auto px-8 py-3.5 sm:px-10 sm:py-4 text-xs font-bold tracking-[0.2em] justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
                       >
                         <Send className="mr-2 h-3.5 w-3.5" />
                         <span>Send Enquiry</span>

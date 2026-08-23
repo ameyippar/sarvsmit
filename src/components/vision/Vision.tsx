@@ -14,15 +14,15 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e4eaf4] to-[#cfd6e4] py-28 sm:py-36 lg:py-48 border-t border-[#b8c4d6]/60 text-center"
+      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e4eaf4] to-[#cfd6e4] py-20 sm:py-32 lg:py-44 border-t border-[#b8c4d6]/60 text-center"
     >
       {/* Dramatic Cosmic & Orbital Metallic Lighting */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
         {/* Specular Central Chrome Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[750px] w-[950px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] sm:h-[750px] sm:w-[950px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),transparent_70%)] blur-3xl" />
         
         {/* Orbital Precision Rings */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block">
           <div className="relative h-[650px] w-[650px] sm:h-[800px] sm:w-[800px] rounded-full border border-[#9eaec4]/35">
             <div className="absolute inset-16 rounded-full border border-[#9eaec4]/25 border-dashed animate-[spin_180s_linear_infinite]" />
             <div className="absolute inset-32 rounded-full border border-[#9eaec4]/20" />
@@ -49,10 +49,10 @@ export function Vision() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.base, ease: "easeOut" }}
-          className="metallic-badge inline-flex items-center gap-2 rounded-full px-4 py-1.5 backdrop-blur-md"
+          className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md"
         >
-          <Sparkles className="h-3.5 w-3.5 text-metal" />
-          <span className="text-[11px] font-bold uppercase tracking-[0.32em] text-black">
+          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-metal" />
+          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-black">
             OUR VISION
           </span>
         </motion.div>
@@ -64,7 +64,7 @@ export function Vision() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.slow, delay: 0.1, ease: "easeOut" }}
-          className="mt-8 mx-auto max-w-5xl font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight text-black"
+          className="mt-6 sm:mt-8 mx-auto max-w-5xl font-serif text-[32px] sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-black"
         >
           Building the Future of FMCG Innovation
         </motion.h2>
@@ -76,11 +76,11 @@ export function Vision() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.base, delay: 0.2, ease: "easeOut" }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+          className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-2 sm:gap-4"
         >
           {pillars.map((pillar, idx) => (
-            <div key={pillar} className="flex items-center gap-3 sm:gap-4">
-              <span className="metallic-card rounded-full px-4 py-1.5 font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.24em] text-black shadow-[0_2px_10px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-[#7b8ea8] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+            <div key={pillar} className="flex items-center gap-2 sm:gap-4">
+              <span className="metallic-card rounded-full px-3 py-1 sm:px-4 sm:py-1.5 font-sans text-[11px] sm:text-sm font-bold uppercase tracking-[0.18em] sm:tracking-[0.24em] text-black shadow-[0_2px_10px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-[#7b8ea8]">
                 {pillar}
               </span>
               {idx < pillars.length - 1 && (
@@ -97,28 +97,28 @@ export function Vision() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.slow, delay: 0.3, ease: "easeOut" }}
-          className="mt-16 sm:mt-20 mx-auto max-w-4xl"
+          className="mt-12 sm:mt-16 lg:mt-20 mx-auto max-w-4xl"
         >
-          <div className="group relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-8 sm:p-14 backdrop-blur-2xl shadow-[0_20px_60px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff]">
+          <div className="group relative overflow-hidden rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-6 sm:p-10 lg:p-14 backdrop-blur-2xl shadow-[0_20px_60px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff]">
             {/* Top Glowing Indicator */}
             <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
             {/* Background Watermark Logo */}
-            <div className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 opacity-[0.04] transition-opacity duration-500 group-hover:opacity-[0.07]">
-              <LogoMark className="h-64 w-64 text-black" />
+            <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 opacity-[0.03] transition-opacity duration-500 group-hover:opacity-[0.06] hidden sm:block">
+              <LogoMark className="h-48 w-48 sm:h-64 sm:w-64 text-black" />
             </div>
 
             <div className="relative z-10 flex flex-col items-center">
-              <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#4d5666]">
+              <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.3em] text-[#4d5666]">
                 Vision
               </span>
 
               {/* Exact Vision Statement */}
-              <p className="mt-6 font-serif text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed tracking-tight text-black max-w-3xl">
+              <p className="mt-4 sm:mt-6 font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed tracking-tight text-black max-w-3xl">
                 &ldquo;To become a globally recognized FMCG innovation and commercialization partner delivering next-generation food systems for modern consumers.&rdquo;
               </p>
 
-              <div className="mt-8 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-[#4d5666] uppercase">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-[#4d5666] uppercase">
                 <span>Sarvsmit Global Enterprise</span>
                 <span className="h-1 w-1 rounded-full bg-black/40" />
                 <span>Global Reach</span>
