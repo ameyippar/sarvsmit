@@ -71,9 +71,9 @@ export function Hero() {
       </div>
 
       <Container className="relative z-10 w-full">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
+        <div className="grid items-center justify-items-center lg:justify-items-stretch gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Main Hero Content (Left 7-8 cols on large screens) */}
-          <div className="lg:col-span-7 xl:col-span-8 text-left">
+          <div className="w-full lg:col-span-7 xl:col-span-8 text-left">
             {/* Top Positioning Badge */}
             <div className="flex justify-start">
               <motion.div
@@ -195,24 +195,24 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Visual Chrome Emblem Showcase - Perfectly Centered on Mobile & Desktop */}
+          {/* Right Visual Chrome Emblem Showcase - Symmetrically Centered on Mobile & Desktop */}
           <motion.div
             initial={reduce ? false : { opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: duration.slow, delay: 0.2, ease }}
-            className="lg:col-span-5 xl:col-span-4 flex flex-col items-center justify-center relative mt-6 lg:mt-0 w-full"
+            className="w-full lg:col-span-5 xl:col-span-4 flex flex-col items-center justify-center relative mt-6 lg:mt-0"
           >
-            <div className="relative flex w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] flex-col items-center mx-auto">
+            <div className="relative w-full max-w-[300px] xs:max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] mx-auto flex flex-col items-center">
               {/* Glowing Halo Backdrop */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white via-[#b8c6dc]/40 to-transparent blur-2xl -z-10" />
               
               {/* Brushed Metallic Glass Frame */}
-              <div className="relative w-full rounded-2xl border border-[#b8c4d6] bg-gradient-to-b from-white/95 via-[#ebf0f8] to-[#d3dce8] p-6 sm:p-8 md:p-10 backdrop-blur-xl shadow-[0_20px_50px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff] text-center mx-auto">
+              <div className="relative w-full rounded-2xl border border-[#b8c4d6] bg-gradient-to-b from-white/95 via-[#ebf0f8] to-[#d3dce8] p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-[0_20px_50px_rgba(20,25,35,0.1),inset_0_1px_1px_#ffffff] text-center mx-auto">
                 {/* 3D Chrome Emblem with subtle float */}
                 <motion.div
                   animate={reduce ? undefined : { y: [-5, 5, -5] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="mx-auto flex h-32 w-32 sm:h-36 sm:w-36 md:h-44 md:w-44 items-center justify-center rounded-full border border-[#a8b6cb] bg-gradient-to-br from-white via-[#dde4f0] to-[#b6c2d4] p-5 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.15),inset_0_2px_4px_#ffffff]"
+                  className="mx-auto flex h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 items-center justify-center rounded-full border border-[#a8b6cb] bg-gradient-to-br from-white via-[#dde4f0] to-[#b6c2d4] p-4 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.15),inset_0_2px_4px_#ffffff]"
                 >
                   <LogoMark className="h-full w-full drop-shadow-[0_8px_16px_rgba(0,0,0,0.3)]" />
                 </motion.div>
@@ -228,19 +228,19 @@ export function Hero() {
                 </div>
 
                 {/* Micro Metrics / Highlights */}
-                <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2.5 sm:gap-3 border-t border-[#b8c2d1]/60 pt-4 sm:pt-5 text-left">
-                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2.5 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
-                    <span className="text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] text-[#556072] font-bold">Formulation</span>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-bold text-black">R&D to Scale</p>
+                <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2 sm:gap-3 border-t border-[#b8c2d1]/60 pt-4 sm:pt-5 text-left">
+                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
+                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#556072] font-bold">Formulation</span>
+                    <p className="mt-0.5 text-[10.5px] sm:text-xs font-bold text-black">R&D to Scale</p>
                   </div>
-                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2.5 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
-                    <span className="text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] text-[#556072] font-bold">Execution</span>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-bold text-black">Turnkey FMCG</p>
+                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
+                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#556072] font-bold">Execution</span>
+                    <p className="mt-0.5 text-[10.5px] sm:text-xs font-bold text-black">Turnkey FMCG</p>
                   </div>
                 </div>
 
                 {/* Motto */}
-                <div className="mt-4 sm:mt-5 text-[9px] sm:text-[10px] uppercase tracking-[0.24em] text-[#495260] font-bold">
+                <div className="mt-4 sm:mt-5 text-[8.5px] sm:text-[10px] uppercase tracking-[0.22em] text-[#495260] font-bold">
                   Innovate &bull; Build &bull; Scale &bull; Impact
                 </div>
               </div>
