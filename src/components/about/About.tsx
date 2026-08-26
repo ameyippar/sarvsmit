@@ -97,7 +97,7 @@ export function About() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-black">
               About Sarvsmit
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
@@ -132,7 +132,7 @@ export function About() {
         {/* Five Disciplines Matrix (Bespoke Laboratory Specification Layout) */}
         <div className="mt-14 sm:mt-18">
           <div className="mb-6 flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#4d5666]">
               Core Integrated Disciplines
             </span>
             <div className="hidden h-px flex-1 bg-[#a8b6cb]/50 ml-6 sm:block" />
@@ -169,7 +169,7 @@ export function About() {
 
                     {/* Discipline Title */}
                     <div className="mt-5">
-                      <span className="text-[9.5px] font-bold uppercase tracking-[0.18em] text-[#556072]">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-[#556072]">
                         {item.tag}
                       </span>
                       <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
@@ -184,7 +184,7 @@ export function About() {
                   </div>
 
                   {/* Card Bottom Spec Indicator */}
-                  <div className="mt-6 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[9.5px] font-mono uppercase tracking-wider text-[#5c6778]">
+                  <div className="mt-6 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] uppercase tracking-wider text-[#5c6778] font-medium">
                     <span>Standardized Protocol</span>
                     <span className="h-1.5 w-1.5 rounded-full bg-black/40 group-hover:bg-black transition-colors" />
                   </div>

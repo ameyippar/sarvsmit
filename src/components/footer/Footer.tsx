@@ -100,7 +100,7 @@ export function Footer() {
 
           {/* Col 2: Services (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Services
             </span>
             <ul className="mt-5 space-y-3" role="list">
@@ -120,7 +120,7 @@ export function Footer() {
 
           {/* Col 3: Explore (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Explore & Portfolio
             </span>
             <ul className="mt-5 space-y-3" role="list">
@@ -141,7 +141,7 @@ export function Footer() {
 
           {/* Col 4: Contact (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Contact
             </span>
             <ul className="mt-5 space-y-3 text-sm text-[#38404d] font-medium" role="list">
@@ -150,7 +150,7 @@ export function Footer() {
                   href="mailto:info@sarvsmitglobalenterprise.com"
                   className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-black break-all"
                 >
-                  <Mail className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
+                  <Mail strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
                   <span>info@sarvsmitglobalenterprise.com</span>
                 </a>
               </li>
@@ -159,7 +159,7 @@ export function Footer() {
                   href="tel:+919272417391"
                   className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-black"
                 >
-                  <Phone className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
+                  <Phone strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
                   <span>+91-9272417391</span>
                 </a>
               </li>
@@ -170,7 +170,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-black"
                 >
-                  <Globe className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
+                  <Globe strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
                   <span>sarvsmitglobalenterprise.com</span>
                 </a>
               </li>
@@ -183,7 +183,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col gap-4 text-xs text-[#434b58] sm:flex-row sm:items-center sm:justify-between font-medium">
           <p>© 2026 Sarvsmit Global Enterprise. All Rights Reserved.</p>
-          <p className="font-sans uppercase tracking-[0.2em] text-black font-bold">
+          <p className="font-sans uppercase tracking-wider text-black font-semibold">
             Ideate · Innovate · Create · Scale · Impact
           </p>
         </div>

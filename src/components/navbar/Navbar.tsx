@@ -88,10 +88,10 @@ export function Navbar() {
             <LogoMark className="h-6 w-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.15)]" />
           </div>
           <div className="flex flex-col leading-none">
-            <span className="font-serif text-[15px] font-bold tracking-[0.22em] text-black transition-colors">
+            <span className="font-sans text-[15px] font-bold tracking-wider text-black transition-colors">
               {site.shortName}
             </span>
-            <span className="mt-0.5 text-[8px] font-bold tracking-[0.32em] text-[#556072] uppercase">
+            <span className="mt-0.5 text-[9px] font-semibold tracking-wider text-[#556072] uppercase">
               {site.subName}
             </span>
           </div>
@@ -126,6 +126,7 @@ export function Navbar() {
                   <span>{item.label}</span>
                   {hasChildren && (
                     <ChevronDown
+                      strokeWidth={1.5}
                       className={cn(
                         "h-3.5 w-3.5 transition-transform duration-200",
                         isOpen ? "rotate-180 text-black" : "text-[#6b7588]",
@@ -158,8 +159,7 @@ export function Navbar() {
                                 <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-[#253135] to-transparent opacity-40" />
 
                                 <div className="flex items-center justify-between">
-                                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#253135]/20 bg-white/80 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.16em] text-[#253135]">
-                                    <Sparkles className="h-2.5 w-2.5 text-[#253135]" />
+                                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#253135]/20 bg-white/80 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#253135]">
                                     <span>{item.brandPreview.badge}</span>
                                   </span>
                                   <span className="text-[10px] font-bold tracking-widest text-[#253135]/60 uppercase">
@@ -204,7 +204,7 @@ export function Navbar() {
                                     className="flex items-center justify-center gap-1.5 rounded-lg bg-[#253135] px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[#F5F0E8] transition-colors hover:bg-black"
                                   >
                                     <span>Visit Brand</span>
-                                    <ExternalLink className="h-3 w-3" />
+                                    <ExternalLink strokeWidth={1.5} className="h-3 w-3" />
                                   </a>
                                   <a
                                     href="#case-studies"
@@ -212,7 +212,7 @@ export function Navbar() {
                                     className="flex items-center justify-center gap-1.5 rounded-lg border border-[#253135]/30 bg-white/80 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[#253135] transition-colors hover:bg-white"
                                   >
                                     <span>Case Study</span>
-                                    <ArrowRight className="h-3 w-3" />
+                                    <ArrowRight strokeWidth={1.5} className="h-3 w-3" />
                                   </a>
                                 </div>
                               </div>
@@ -307,6 +307,7 @@ export function Navbar() {
                             aria-label={`Toggle ${item.label} submenu`}
                           >
                             <ChevronDown
+                              strokeWidth={1.5}
                               className={cn(
                                 "h-4 w-4 transition-transform duration-200",
                                 isExpanded ? "rotate-180" : "",
@@ -336,7 +337,7 @@ export function Navbar() {
                                   className="inline-flex items-center gap-1 rounded bg-[#253135] px-3 py-1.5 text-[10.5px] font-bold uppercase text-[#F5F0E8]"
                                 >
                                   <span>Visit Site</span>
-                                  <ExternalLink className="h-3 w-3" />
+                                  <ExternalLink strokeWidth={1.5} className="h-3 w-3" />
                                 </a>
                                 <a
                                   href="#case-studies"
@@ -357,7 +358,7 @@ export function Navbar() {
                                 className="block py-1.5 text-xs font-semibold text-[#434b58] hover:text-black"
                               >
                                 <div className="flex items-center gap-1.5">
-                                  <ArrowRight className="h-3 w-3 text-black/50" />
+                                  <ArrowRight strokeWidth={1.5} className="h-3 w-3 text-black/50" />
                                   <span>{sub.label}</span>
                                 </div>
                               </a>

@@ -95,11 +95,8 @@ export function Hero() {
                 transition={{ duration: duration.base, ease }}
                 className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md"
               >
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-40" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-black" />
-                </span>
-                <span className="text-[9.5px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-black">
+                <span className="h-2 w-2 rounded-full bg-black/80" />
+                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-black">
                   {site.positioning}
                 </span>
               </motion.div>
@@ -112,10 +109,10 @@ export function Hero() {
               transition={{ duration: duration.base, delay: 0.08, ease }}
               className="mt-5 sm:mt-6 flex flex-col"
             >
-              <span className="text-[11px] font-bold uppercase tracking-[0.34em] text-[#4d5666] sm:text-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4d5666] sm:text-sm">
                 {site.shortName} {site.subName}
               </span>
-              <span className="mt-1 text-xs sm:text-sm italic tracking-[0.12em] text-graphite sm:text-base font-serif">
+              <span className="mt-1 text-xs sm:text-sm italic text-graphite sm:text-base font-serif">
                 &ldquo;{site.tagline}&rdquo;
               </span>
             </motion.div>
@@ -154,20 +151,20 @@ export function Hero() {
                 {lifecycleStages.map((stage, idx) => (
                   <div key={stage.label} className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <div className="flex items-center gap-1 sm:gap-1.5">
-                      <span className="text-[8.5px] sm:text-[9px] font-mono text-[#5f697a] font-bold">{stage.step}</span>
-                      <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-black">
+                      <span className="text-[10px] font-mono text-[#5f697a] font-bold">{stage.step}</span>
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-black">
                         {stage.label}
                       </span>
                     </div>
                     {idx < lifecycleStages.length - 1 && (
-                      <ChevronRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#7a889e] shrink-0" />
+                      <ChevronRight strokeWidth={1.5} className="h-3.5 w-3.5 text-[#7a889e] shrink-0" />
                     )}
                   </div>
                 ))}
               </div>
 
               {/* Pillars list */}
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-[#b8c2d1]/50 pt-2.5 text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.16em] text-[#333a46] font-semibold">
+              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-[#b8c2d1]/50 pt-2.5 text-[10.5px] sm:text-xs uppercase tracking-wider text-[#333a46] font-medium">
                 {pillars.map((pillar, i) => (
                   <span key={pillar} className="flex items-center gap-1.5">
                     {i > 0 && <span className="h-1 w-1 rounded-full bg-black/30" />}
@@ -188,22 +185,22 @@ export function Hero() {
               <Button
                 href="#capabilities"
                 variant="primary"
-                className="group relative overflow-hidden px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] shadow-[0_4px_16px_rgba(0,0,0,0.18)] justify-center"
+                className="group relative overflow-hidden px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-semibold tracking-wider shadow-[0_4px_16px_rgba(0,0,0,0.18)] justify-center"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleSmoothScroll(e, "capabilities")}
               >
                 <span className="relative z-10">Explore Our Capabilities</span>
-                <ArrowUpRight className="relative z-10 ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <ArrowUpRight strokeWidth={1.5} className="relative z-10 ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Button>
 
               {/* Secondary CTA */}
               <Button
                 href="#contact"
                 variant="secondary"
-                className="group px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] border-[#aab5c6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] hover:bg-white justify-center"
+                className="group px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-semibold tracking-wider border-[#aab5c6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] hover:bg-white justify-center"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleSmoothScroll(e, "contact")}
               >
                 <span>Start a Project</span>
-                <ChevronRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ChevronRight strokeWidth={1.5} className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </motion.div>
           </div>
@@ -232,28 +229,28 @@ export function Hero() {
 
                 {/* Monogram Brand Header */}
                 <div className="mt-5 sm:mt-6">
-                  <h2 className="font-serif text-xl sm:text-2xl font-bold tracking-[0.22em] text-black">
+                  <h2 className="font-sans text-xl sm:text-2xl font-bold tracking-wider text-black">
                     {site.shortName}
                   </h2>
-                  <p className="mt-0.5 text-[8.5px] sm:text-[9.5px] uppercase tracking-[0.34em] text-[#4d5666] font-bold">
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] uppercase tracking-wider text-[#4d5666] font-semibold">
                     {site.subName}
                   </p>
                 </div>
 
                 {/* Micro Metrics / Highlights */}
                 <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2.5 sm:gap-3 border-t border-[#b8c2d1]/60 pt-4 sm:pt-5 text-left">
-                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
-                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#556072] font-bold">Formulation</span>
-                    <p className="mt-0.5 text-[10.5px] sm:text-xs font-bold text-black">R&D to Scale</p>
+                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2.5 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#556072] font-semibold">Formulation</span>
+                    <p className="mt-0.5 text-xs font-bold text-black">R&D to Scale</p>
                   </div>
-                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
-                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#556072] font-bold">Execution</span>
-                    <p className="mt-0.5 text-[10.5px] sm:text-xs font-bold text-black">Turnkey FMCG</p>
+                  <div className="rounded-lg border border-[#b8c4d6]/60 bg-white/70 p-2.5 sm:p-3 shadow-[inset_0_1px_0_#ffffff]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#556072] font-semibold">Execution</span>
+                    <p className="mt-0.5 text-xs font-bold text-black">Turnkey FMCG</p>
                   </div>
                 </div>
 
                 {/* Motto */}
-                <div className="mt-4 sm:mt-5 text-[8.5px] sm:text-[10px] uppercase tracking-[0.22em] text-[#495260] font-bold">
+                <div className="mt-4 sm:mt-5 text-[10px] sm:text-[11px] uppercase tracking-wider text-[#495260] font-semibold">
                   Innovate &bull; Build &bull; Scale &bull; Impact
                 </div>
               </div>

@@ -139,7 +139,7 @@ export function InnovationFramework() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Structured Methodology
             </span>
           </motion.div>
@@ -204,7 +204,7 @@ export function InnovationFramework() {
                           : "border-[#b8c4d6] bg-white/70 text-graphite shadow-[inset_0_1px_0_#ffffff]"
                       }`}
                     >
-                      <Icon className="h-4.5 w-4.5" />
+                      <Icon strokeWidth={1.5} className="h-4.5 w-4.5" />
                     </div>
                   </div>
 
@@ -215,7 +215,7 @@ export function InnovationFramework() {
                 </div>
 
                 {/* Subtitle / Active Marker */}
-                <div className="mt-4 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-[#4d5666] font-semibold transition-colors duration-300 group-hover:text-black">
+                <div className="mt-4 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] uppercase tracking-wider text-[#4d5666] font-semibold transition-colors duration-300 group-hover:text-black">
                   <span>Phase {idx + 1}</span>
                   <div
                     className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
@@ -254,7 +254,7 @@ export function InnovationFramework() {
                       Phase 0{selectedStage + 1}
                     </span>
                     <span className="h-1 w-1 rounded-full bg-black/40" />
-                    <span className="text-xs uppercase tracking-[0.16em] text-black font-bold">
+                    <span className="text-xs uppercase tracking-wider text-black font-bold">
                       {stages[selectedStage].subtitle}
                     </span>
                   </div>
@@ -271,8 +271,8 @@ export function InnovationFramework() {
                 {/* Right Side: Key Deliverables (5 cols) */}
                 <div className="lg:col-span-5 rounded-xl border border-[#b8c4d6]/80 bg-white/70 p-6 shadow-[inset_0_1px_0_#ffffff]">
                   <div className="flex items-center gap-2 mb-4">
-                    <ArrowRight className="h-4 w-4 text-black" />
-                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-black">
+                    <ArrowRight strokeWidth={1.5} className="h-4 w-4 text-black" />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-black">
                       Key Milestone Deliverables
                     </span>
                   </div>
@@ -283,7 +283,7 @@ export function InnovationFramework() {
                         key={item}
                         className="flex items-start gap-2.5 text-sm text-graphite/90 font-medium"
                       >
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-black mt-0.5" />
+                        <CheckCircle2 strokeWidth={1.5} className="h-4 w-4 shrink-0 text-black mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}

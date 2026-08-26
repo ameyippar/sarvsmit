@@ -99,7 +99,7 @@ export function CaseStudies() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-black">
               Proven Platforms
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
@@ -168,7 +168,7 @@ export function CaseStudies() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
                       <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-                        <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[9px] font-mono font-bold uppercase tracking-wider text-black backdrop-blur-sm shadow-sm">
+                        <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-black backdrop-blur-sm shadow-sm">
                           Flagship Venture
                         </span>
                         <span className="font-mono text-xs font-bold text-white drop-shadow">
@@ -184,7 +184,7 @@ export function CaseStudies() {
                       <span className="font-mono text-xs font-bold tracking-widest text-[#5c6778] transition-colors duration-300 group-hover:text-black">
                         {study.number}
                       </span>
-                      <span className="font-mono text-[9px] font-bold tracking-wider text-[#5c6778] uppercase">
+                      <span className="text-[10px] font-semibold tracking-wider text-[#5c6778] uppercase">
                         {study.tag}
                       </span>
                     </div>
@@ -202,25 +202,25 @@ export function CaseStudies() {
                             href={study.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white/80 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-black hover:bg-black hover:text-white transition-colors shadow-sm"
+                            className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white/80 px-2.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-black hover:bg-black hover:text-white transition-colors shadow-sm"
                           >
                             <span>Live Brand</span>
-                            <ExternalLink className="h-2.5 w-2.5" />
+                            <ExternalLink strokeWidth={1.5} className="h-2.5 w-2.5" />
                           </a>
                         </div>
-                        <p className="text-[11px] font-semibold tracking-wider text-[#5c6778] mt-1">
+                        <p className="text-[11px] font-medium tracking-wider text-[#5c6778] mt-1">
                           {study.subtitle}
                         </p>
                       </div>
                     ) : (
                       <div>
-                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#556072]">
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#556072]">
                           {study.tag}
                         </span>
                         <h3 className="mt-1 font-sans text-xl sm:text-2xl font-bold tracking-tight text-black transition-colors duration-300">
                           {study.title}
                         </h3>
-                        <p className="text-[11px] font-semibold tracking-wider text-[#5c6778] mt-1">
+                        <p className="text-[11px] font-medium tracking-wider text-[#5c6778] mt-1">
                           {study.subtitle}
                         </p>
                       </div>
@@ -242,7 +242,7 @@ export function CaseStudies() {
                         key={item}
                         className="flex items-center gap-2 text-xs text-graphite/90 font-medium"
                       >
-                        <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-black" />
+                        <CheckCircle2 strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-black" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -255,15 +255,15 @@ export function CaseStudies() {
                     href={study.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 pt-3.5 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[11px] font-bold tracking-wider text-black transition-colors hover:text-black/80"
+                    className="mt-6 pt-3.5 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[11px] font-semibold tracking-wider text-black transition-colors hover:text-black/80"
                   >
                     <span>Visit culturedcookieco.com</span>
-                    <ExternalLink className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ExternalLink strokeWidth={1.5} className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 ) : (
-                  <div className="mt-6 pt-3.5 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-[#5c6778]">
+                  <div className="mt-6 pt-3.5 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] uppercase tracking-wider text-[#5c6778] font-medium">
                     <span>Commercial Protocol</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-black" />
+                    <ArrowUpRight strokeWidth={1.5} className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-black" />
                   </div>
                 )}
               </motion.div>

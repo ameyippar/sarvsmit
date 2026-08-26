@@ -107,8 +107,7 @@ export function Services() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Layers className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Consultancy Capabilities
             </span>
           </motion.div>
@@ -172,13 +171,13 @@ export function Services() {
                           : "border-[#b8c4d6] bg-white/70 text-graphite shadow-[inset_0_1px_0_#ffffff]"
                       }`}
                     >
-                      <Icon className="h-5 w-5" />
+                      <Icon strokeWidth={1.5} className="h-5 w-5" />
                     </div>
                   </div>
 
                   {/* Title & Tagline */}
                   <div className="mt-6">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[10.5px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       {service.tagline}
                     </span>
                     <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
@@ -197,7 +196,7 @@ export function Services() {
                         className="flex items-start gap-2.5 text-sm leading-relaxed text-graphite/90 transition-colors duration-200 group-hover:text-black font-medium"
                       >
                         <div className="mt-1 flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border border-[#a8b6cb] bg-white/80 text-black shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
-                          <Check className="h-2.5 w-2.5" />
+                          <Check strokeWidth={2} className="h-2.5 w-2.5" />
                         </div>
                         <span>{item}</span>
                       </li>
@@ -208,7 +207,7 @@ export function Services() {
                 {/* Bottom Card Footer */}
                 <div className="mt-8 pt-4 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[11px] font-semibold tracking-wider text-[#4d5666] transition-colors duration-300 group-hover:text-black">
                   <span>Integrated Offering</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-black" />
+                  <ArrowUpRight strokeWidth={1.5} className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-black" />
                 </div>
               </motion.div>
             );

@@ -66,7 +66,7 @@ export function Capabilities() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-black">
               Technical Capabilities
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
@@ -92,7 +92,7 @@ export function Capabilities() {
           {/* 9 Capabilities Grid */}
           <div className="lg:col-span-8">
             <div className="mb-6 flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#4d5666]">
                 Core Competencies
               </span>
               <div className="h-px flex-1 bg-[#a8b6cb]/50 ml-6" />
@@ -123,7 +123,7 @@ export function Capabilities() {
                     </div>
 
                     <div className="mt-5 flex items-start gap-2.5">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-black" />
+                      <CheckCircle2 strokeWidth={1.5} className="mt-0.5 h-4 w-4 shrink-0 text-black" />
                       <h3 className="font-sans text-sm font-semibold leading-snug text-black transition-colors">
                         {cap.name}
                       </h3>
@@ -138,7 +138,7 @@ export function Capabilities() {
           <div className="lg:col-span-4 flex flex-col justify-between gap-6">
             <div>
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[#4d5666]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#4d5666]">
                   Platforms &amp; Systems
                 </span>
                 <div className="h-px flex-1 bg-[#a8b6cb]/50 ml-6" />
@@ -157,14 +157,14 @@ export function Capabilities() {
                   <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-[#4d5666]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       Proprietary Platform
                     </span>
                     <span className="h-2 w-2 rounded-full bg-black/40" />
                   </div>
 
                   <div className="mt-5 flex items-baseline gap-3">
-                    <h3 className="font-serif text-5xl font-bold tracking-tight text-black">
+                    <h3 className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-black">
                       EPS
                     </h3>
                   </div>
@@ -186,14 +186,14 @@ export function Capabilities() {
                   <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-[#4d5666]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       Proprietary Platform
                     </span>
                     <span className="h-2 w-2 rounded-full bg-black/40" />
                   </div>
 
                   <div className="mt-5 flex items-baseline gap-3">
-                    <h3 className="font-serif text-5xl font-bold tracking-tight text-black">
+                    <h3 className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-black">
                       CCM
                     </h3>
                   </div>

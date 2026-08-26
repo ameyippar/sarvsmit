@@ -51,7 +51,7 @@ export function Vision() {
           transition={{ duration: duration.base, ease: "easeOut" }}
           className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md"
         >
-          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-black">
+          <span className="text-xs font-semibold uppercase tracking-wider text-black">
             Our Long-Term Vision
           </span>
         </motion.div>
@@ -79,7 +79,7 @@ export function Vision() {
         >
           {pillars.map((pillar, idx) => (
             <div key={pillar} className="flex items-center gap-2 sm:gap-4">
-              <span className="metallic-card rounded-full px-3 py-1 sm:px-4 sm:py-1.5 font-sans text-[11px] sm:text-sm font-bold uppercase tracking-[0.18em] sm:tracking-[0.24em] text-black shadow-[0_2px_10px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-[#7b8ea8]">
+              <span className="metallic-card rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 font-sans text-xs sm:text-sm font-semibold uppercase tracking-wider text-black shadow-[0_2px_10px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-[#7b8ea8]">
                 {pillar}
               </span>
               {idx < pillars.length - 1 && (
@@ -108,7 +108,7 @@ export function Vision() {
                 <LogoMark className="h-full w-full drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]" />
               </div>
 
-              <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.3em] text-[#4d5666]">
+              <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#4d5666]">
                 Vision
               </span>
 
@@ -117,7 +117,7 @@ export function Vision() {
                 &ldquo;To become a globally recognized FMCG innovation and commercialization partner delivering next-generation food systems for modern consumers.&rdquo;
               </p>
 
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-[#4d5666] uppercase">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-2 text-[10.5px] sm:text-xs font-semibold tracking-wider text-[#4d5666] uppercase">
                 <span>Sarvsmit Global Enterprise</span>
                 <span className="h-1 w-1 rounded-full bg-black/40" />
                 <span>Global Reach</span>

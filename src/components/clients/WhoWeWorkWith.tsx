@@ -83,7 +83,7 @@ export function WhoWeWorkWith() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Client &amp; Partner Profiles
             </span>
           </motion.div>
@@ -158,7 +158,7 @@ export function WhoWeWorkWith() {
                           : "border-[#b8c4d6] bg-white/70 text-graphite shadow-[inset_0_1px_0_#ffffff]"
                       }`}
                     >
-                      <Icon className="h-5 w-5" />
+                      <Icon strokeWidth={1.5} className="h-5 w-5" />
                     </div>
                   </div>
 
@@ -176,7 +176,7 @@ export function WhoWeWorkWith() {
                 {/* Footer */}
                 <div className="mt-8 pt-4 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[11px] font-semibold tracking-wider text-[#4d5666] transition-colors duration-300 group-hover:text-black">
                   <span>Segment {item.step}</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-black" />
+                  <ArrowUpRight strokeWidth={1.5} className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-black" />
                 </div>
               </motion.div>
             );

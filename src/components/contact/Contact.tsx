@@ -131,7 +131,7 @@ export function Contact() {
           <div className="absolute inset-x-0 -top-px h-[2px] bg-gradient-to-r from-transparent via-black to-transparent opacity-80" />
 
           <div className="mx-auto max-w-4xl">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Start Your Innovation Journey
             </span>
 
@@ -152,18 +152,18 @@ export function Contact() {
                 href="#contact-form-block"
                 variant="primary"
                 onClick={handleSmoothScrollToContact}
-                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] shadow-[0_4px_16px_rgba(0,0,0,0.15)] justify-center"
+                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-semibold tracking-wider shadow-[0_4px_16px_rgba(0,0,0,0.15)] justify-center"
               >
                 <span>Start a Project</span>
-                <ArrowUpRight className="ml-2 h-4 w-4" />
+                <ArrowUpRight strokeWidth={1.5} className="ml-2 h-4 w-4" />
               </Button>
 
               <Button
                 href="tel:+919272417391"
                 variant="secondary"
-                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-bold tracking-[0.2em] border-[#aab5c6] bg-white/70 shadow-[inset_0_1px_0_#ffffff] hover:bg-white justify-center"
+                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 text-xs font-semibold tracking-wider border-[#aab5c6] bg-white/70 shadow-[inset_0_1px_0_#ffffff] hover:bg-white justify-center"
               >
-                <Phone className="mr-2 h-3.5 w-3.5 text-black" />
+                <Phone strokeWidth={1.5} className="mr-2 h-3.5 w-3.5 text-black" />
                 <span>Talk to Sarvsmit</span>
               </Button>
             </div>
@@ -185,7 +185,7 @@ export function Contact() {
               className="lg:col-span-5"
             >
               <div className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm">
-                <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+                <span className="text-xs font-semibold uppercase tracking-wider text-black">
                   Direct Inquiries
                 </span>
               </div>
@@ -207,10 +207,10 @@ export function Contact() {
                   className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
-                    <Mail className="h-4.5 w-4.5" />
+                    <Mail strokeWidth={1.5} className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       Email
                     </span>
                     <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors break-all">
@@ -225,10 +225,10 @@ export function Contact() {
                   className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
-                    <Phone className="h-4.5 w-4.5" />
+                    <Phone strokeWidth={1.5} className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       Phone
                     </span>
                     <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors">
@@ -245,10 +245,10 @@ export function Contact() {
                   className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
-                    <Globe className="h-4.5 w-4.5" />
+                    <Globe strokeWidth={1.5} className="h-4.5 w-4.5" />
                   </div>
                   <div>
-                    <span className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                       Website
                     </span>
                     <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors">

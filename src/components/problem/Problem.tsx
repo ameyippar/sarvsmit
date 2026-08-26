@@ -146,7 +146,7 @@ export function Problem() {
               transition={{ duration: duration.base, ease }}
               className="flex items-center gap-3 border-b border-red-300/60 pb-3"
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/90 px-3 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.2em] text-red-700">
+              <span className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/90 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-red-700">
                 The Scaling Reality
               </span>
               <span className="h-px flex-1 bg-gradient-to-r from-red-300/40 to-transparent" />
@@ -189,13 +189,13 @@ export function Problem() {
           >
             <div className="rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-6 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,25,35,0.06),inset_0_1px_1px_#ffffff]">
               <div className="flex items-center justify-between">
-                <span className="text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#556072]">
                   Industry Reality
                 </span>
-                <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-red-600/90" />
               </div>
               <div className="mt-3 flex items-baseline gap-2">
-                <span className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-black">
+                <span className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-black">
                   80–85%
                 </span>
                 <span className="text-xs font-bold uppercase tracking-wider text-red-700">
@@ -216,7 +216,7 @@ export function Problem() {
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold text-red-700">01 — 07</span>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4d5666]">
                 Common Scale Barriers
               </span>
             </div>
@@ -263,14 +263,14 @@ export function Problem() {
                       <span className="font-mono text-xs font-bold text-black">
                         {item.number}
                       </span>
-                      <span className="rounded-full border border-red-300/70 bg-red-50/80 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-red-700">
+                      <span className="rounded-full border border-red-300/70 bg-red-50/80 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-red-700">
                         {item.severity}
                       </span>
                     </div>
 
                     {/* Category & Title */}
                     <div className="mt-5">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#556072]">
+                      <span className="text-[10.5px] font-bold uppercase tracking-wider text-[#556072]">
                         {item.category}
                       </span>
                       <h3 className="mt-1 font-sans text-lg sm:text-[19px] font-bold leading-snug text-black transition-colors duration-200">
@@ -285,7 +285,7 @@ export function Problem() {
                   </div>
 
                   {/* Card Bottom Progress Accent */}
-                  <div className="mt-5 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] uppercase tracking-wider text-[#5c6778] font-bold">
+                  <div className="mt-5 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] uppercase tracking-wider text-[#5c6778] font-semibold">
                     <span>Friction Point {item.number}</span>
                     <span className="h-1.5 w-1.5 rounded-full bg-red-600/40 group-hover:bg-red-600 transition-colors" />
                   </div>
@@ -301,8 +301,8 @@ export function Problem() {
         <div className="mt-16 sm:mt-24">
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-600 animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-black">
+              <span className="h-2 w-2 rounded-full bg-red-600/90" />
+              <span className="text-xs font-bold uppercase tracking-wider text-black">
                 The Downstream Consequences of Unplanned Scale
               </span>
             </div>
@@ -328,7 +328,7 @@ export function Problem() {
                     <span className="font-mono text-xs font-bold text-red-700">
                       {item.number}
                     </span>
-                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.14em] text-red-700">
+                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-red-700">
                       {item.badge}
                     </span>
                   </div>
@@ -358,13 +358,13 @@ export function Problem() {
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div className="flex items-start gap-4">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black text-white shadow-[0_2px_10px_rgba(0,0,0,0.18)]">
-                  <ShieldCheck className="h-5 w-5" />
+                  <ShieldCheck strokeWidth={1.5} className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-[#556072]">
+                  <span className="text-[10.5px] font-semibold uppercase tracking-wider text-[#556072]">
                     De-Risking Commercial Scale
                   </span>
-                  <p className="mt-0.5 font-serif text-xl sm:text-2xl font-bold text-black">
+                  <p className="mt-0.5 font-sans text-lg sm:text-xl font-bold text-black">
                     Engineered through science. Validated across 6 commercial viability gates.
                   </p>
                 </div>
@@ -373,10 +373,10 @@ export function Problem() {
               <a
                 href="#services"
                 onClick={(e) => handleSmoothScroll(e, "services")}
-                className="inline-flex items-center justify-center gap-2 self-start md:self-center rounded-lg bg-black px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-md transition-all hover:bg-black/80 hover:translate-x-0.5 shrink-0"
+                className="inline-flex items-center justify-center gap-2 self-start md:self-center rounded-lg bg-black px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition-all hover:bg-black/80 hover:translate-x-0.5 shrink-0"
               >
                 <span>Explore Solutions</span>
-                <ArrowRight className="h-3.5 w-3.5" />
+                <ArrowRight strokeWidth={1.5} className="h-3.5 w-3.5" />
               </a>
             </div>
           </motion.div>

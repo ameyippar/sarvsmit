@@ -107,7 +107,7 @@ export function InnovationProcess() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Lifecycle Execution
             </span>
           </motion.div>
@@ -157,12 +157,12 @@ export function InnovationProcess() {
                   <span className={`font-mono text-xs font-bold ${activeStage === stg.id ? "text-white" : "text-[#556072]"}`}>
                     {stg.step}
                   </span>
-                  <span className="text-[11px] font-bold uppercase tracking-[0.16em] truncate">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider truncate">
                     {stg.title}
                   </span>
                 </div>
                 {idx < stages.length - 1 && (
-                  <ArrowRight className="mx-2 hidden h-4 w-4 shrink-0 text-black/30 lg:block" />
+                  <ArrowRight strokeWidth={1.5} className="mx-2 hidden h-4 w-4 shrink-0 text-black/30 lg:block" />
                 )}
               </div>
             ))}
@@ -218,13 +218,13 @@ export function InnovationProcess() {
                           : "border-[#b8c4d6] bg-white/70 text-graphite shadow-[inset_0_1px_0_#ffffff]"
                       }`}
                     >
-                      <Icon className="h-5 w-5" />
+                      <Icon strokeWidth={1.5} className="h-5 w-5" />
                     </div>
                   </div>
 
                   {/* Stage Title */}
                   <div className="mt-6">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                    <span className="text-[10.5px] font-semibold uppercase tracking-wider text-[#556072]">
                       {stage.phaseTag}
                     </span>
                     <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
@@ -242,7 +242,7 @@ export function InnovationProcess() {
                         key={item}
                         className="flex items-center gap-2.5 text-xs sm:text-[13px] leading-relaxed text-graphite/90 transition-colors duration-200 group-hover:text-black font-medium"
                       >
-                        <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-[#556072] transition-colors duration-200 group-hover:text-black" />
+                        <CheckCircle2 strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#556072] transition-colors duration-200 group-hover:text-black" />
                         <span>{item}</span>
                       </li>
                     ))}

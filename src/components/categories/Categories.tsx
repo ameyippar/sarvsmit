@@ -119,7 +119,7 @@ export function Categories() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Sector Expertise
             </span>
           </motion.div>
@@ -173,7 +173,7 @@ export function Categories() {
                 {/* Top Row: Index and Icon */}
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[11px] font-bold text-[#5c6778] transition-colors duration-300 group-hover:text-black">
+                    <span className="font-mono text-xs font-bold text-[#5c6778] transition-colors duration-300 group-hover:text-black">
                       {cat.number}
                     </span>
                     <div
@@ -183,7 +183,7 @@ export function Categories() {
                           : "border-[#b8c4d6] bg-white/70 text-graphite shadow-[inset_0_1px_0_#ffffff]"
                       }`}
                     >
-                      <Icon className="h-4.5 w-4.5" />
+                      <Icon strokeWidth={1.5} className="h-4.5 w-4.5" />
                     </div>
                   </div>
 
@@ -196,7 +196,7 @@ export function Categories() {
                 {/* Subtag / Arrow */}
                 <div className="mt-4 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] font-semibold text-[#4d5666] transition-colors duration-300 group-hover:text-black">
                   <span>{cat.tag}</span>
-                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-black" />
+                  <ArrowUpRight strokeWidth={1.5} className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-black" />
                 </div>
               </motion.div>
             );
