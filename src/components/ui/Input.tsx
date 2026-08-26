@@ -25,7 +25,7 @@ export function Input({
     <div className={className}>
       <label
         htmlFor={id}
-        className="text-[11px] uppercase tracking-[0.2em] text-muted"
+        className="text-xs font-semibold uppercase tracking-wider text-[#4d5666]"
       >
         {label}
       </label>
@@ -33,11 +33,11 @@ export function Input({
         id={id}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${id}-error` : undefined}
-        className={cn(fieldClass, error && "border-red-300/60")}
+        className={cn(fieldClass, error && "border-red-500/60")}
         {...props}
       />
       {error ? (
-        <p id={`${id}-error`} className="mt-2 text-xs text-red-300">
+        <p id={`${id}-error`} className="mt-2 text-xs text-red-600">
           {error}
         </p>
       ) : null}
@@ -57,7 +57,7 @@ export function Textarea({
     <div className={className}>
       <label
         htmlFor={id}
-        className="text-[11px] uppercase tracking-[0.2em] text-muted"
+        className="text-xs font-semibold uppercase tracking-wider text-[#4d5666]"
       >
         {label}
       </label>

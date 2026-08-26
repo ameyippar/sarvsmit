@@ -137,7 +137,7 @@ export function SixGates() {
                 transition={{ duration: duration.base, ease }}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-7 sm:p-8 backdrop-blur-md transition-all duration-300 ${
+                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-5 xs:p-6 sm:p-7 lg:p-8 backdrop-blur-md transition-all duration-300 ${
                   isHovered
                     ? "border-[#8a9cb5] shadow-[0_15px_40px_rgba(20,25,35,0.09)] translate-y-[-4px]"
                     : ""

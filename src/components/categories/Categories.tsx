@@ -142,7 +142,7 @@ export function Categories() {
           initial={reduce ? "visible" : "hidden"}
           whileInView="visible"
           viewport={viewport}
-          className="mt-16 sm:mt-20 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+          className="mt-14 sm:mt-18 lg:mt-20 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5"
         >
           {categories.map((cat, idx) => {
             const Icon = cat.icon;
@@ -155,7 +155,7 @@ export function Categories() {
                 transition={{ duration: duration.base, ease }}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-5 sm:p-6 backdrop-blur-sm transition-all duration-300 ${
+                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-4 sm:p-5 md:p-6 backdrop-blur-sm transition-all duration-300 ${
                   isHovered
                     ? "border-[#8a9cb5] shadow-[0_12px_35px_rgba(20,25,35,0.09)] translate-y-[-3px]"
                     : ""

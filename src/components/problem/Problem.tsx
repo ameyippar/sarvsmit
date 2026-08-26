@@ -161,7 +161,7 @@ export function Problem() {
               whileInView="visible"
               viewport={viewport}
               transition={{ duration: duration.base, delay: 0.1, ease }}
-              className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight text-black"
+              className="mt-6 font-serif text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight text-black"
             >
               Most Food Products Fail Before They Scale
             </motion.h2>
@@ -373,7 +373,7 @@ export function Problem() {
               <a
                 href="#services"
                 onClick={(e) => handleSmoothScroll(e, "services")}
-                className="inline-flex items-center justify-center gap-2 self-start md:self-center rounded-lg bg-black px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition-all hover:bg-black/80 hover:translate-x-0.5 shrink-0"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto self-stretch sm:self-start md:self-center rounded-lg bg-black px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition-all hover:bg-black/80 hover:translate-x-0.5 shrink-0"
               >
                 <span>Explore Solutions</span>
                 <ArrowRight strokeWidth={1.5} className="h-3.5 w-3.5" />

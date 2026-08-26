@@ -146,9 +146,9 @@ export function InnovationProcess() {
         >
           <div className="flex flex-wrap items-center justify-between gap-2 lg:flex-nowrap">
             {stages.map((stg, idx) => (
-              <div key={stg.id} className="flex flex-1 items-center min-w-[200px] lg:min-w-0">
+              <div key={stg.id} className="flex flex-1 items-center min-w-[130px] xs:min-w-[150px] sm:min-w-[180px] lg:min-w-0">
                 <div
-                  className={`flex flex-1 items-center gap-2.5 rounded-lg px-3 py-2 transition-all duration-300 ${
+                  className={`flex flex-1 items-center gap-2 rounded-lg px-2.5 py-2 sm:gap-2.5 sm:px-3 transition-all duration-300 ${
                     activeStage === stg.id
                       ? "bg-black text-white shadow-[0_2px_10px_rgba(0,0,0,0.15)]"
                       : "text-black/85 hover:bg-white/60"
@@ -157,7 +157,7 @@ export function InnovationProcess() {
                   <span className={`font-mono text-xs font-bold ${activeStage === stg.id ? "text-white" : "text-[#556072]"}`}>
                     {stg.step}
                   </span>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider truncate">
+                  <span className="text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-wider truncate">
                     {stg.title}
                   </span>
                 </div>
@@ -175,7 +175,7 @@ export function InnovationProcess() {
           initial={reduce ? "visible" : "hidden"}
           whileInView="visible"
           viewport={viewport}
-          className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
         >
           {stages.map((stage, idx) => {
             const Icon = stage.icon;
@@ -188,7 +188,7 @@ export function InnovationProcess() {
                 transition={{ duration: duration.base, ease }}
                 onMouseEnter={() => setActiveStage(stage.id)}
                 onMouseLeave={() => setActiveStage(null)}
-                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 ${
+                className={`metallic-card group relative flex flex-col justify-between rounded-xl p-5 sm:p-7 backdrop-blur-md transition-all duration-300 ${
                   isActive
                     ? "border-[#8a9cb5] shadow-[0_15px_35px_rgba(20,25,35,0.09)] translate-y-[-4px]"
                     : ""

@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Send,
 } from "lucide-react";
+import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { Container, Button, Input, Textarea } from "@/components/ui";
 import { duration, ease, fadeUp, viewport } from "@/lib/motion";
 
@@ -40,43 +41,6 @@ export function Contact() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const validate = (): boolean => {
-    const errs: FormErrors = {};
-
-    if (!formData.name.trim()) {
-      errs.name = "Name is required.";
-    }
-
-    if (!formData.email.trim()) {
-      errs.email = "Email is required.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      errs.email = "Please enter a valid email address.";
-    }
-
-    if (!formData.phone.trim()) {
-      errs.phone = "Phone number is required.";
-    }
-
-    if (!formData.requirement.trim()) {
-      errs.requirement = "Project / Requirement is required.";
-    }
-
-    if (!formData.message.trim()) {
-      errs.message = "Message is required.";
-    }
-
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validate()) {
-      // Frontend validation successful. Code is ready for API/webhook integration.
-      setSubmitted(true);
-    }
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -87,32 +51,45 @@ export function Contact() {
     }
   };
 
+  const validate = (): boolean => {
+    const errs: FormErrors = {};
+
+    if (!formData.name.trim()) errs.name = "Name is required.";
+    if (!formData.email.trim()) {
+      errs.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      errs.email = "Please enter a valid email address.";
+    }
+    if (!formData.phone.trim()) errs.phone = "Phone number is required.";
+    if (!formData.requirement.trim()) errs.requirement = "Project / Requirement is required.";
+    if (!formData.message.trim()) errs.message = "Message is required.";
+
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+    setSubmitted(true);
+  };
+
   const handleSmoothScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const elem = document.getElementById("contact-form-block");
-    if (elem) {
-      elem.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById("contact-form-block");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-b from-[#d6dce6] via-[#e6ebf2] to-[#ced6e4] pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-36 lg:pb-36 border-t border-[#b8c4d6]/60"
+      className="relative overflow-hidden bg-gradient-to-b from-[#d8dfeb] via-[#e8edf5] to-[#ced6e4] py-24 sm:py-32 lg:py-40 border-t border-[#b8c4d6]/60"
     >
       {/* Background Lighting */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden" aria-hidden="true">
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9),transparent_70%)] blur-3xl" />
-        <div className="absolute bottom-[10%] right-[5%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_at_center,rgba(190,202,218,0.4),transparent_70%)] blur-3xl" />
-
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `radial-gradient(rgba(20, 30, 50, 0.4) 1px, transparent 1px)`,
-            backgroundSize: "48px 48px",
-          }}
-        />
-
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.85),transparent_70%)] blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8fa0b8]/40 to-transparent" />
       </div>
 
@@ -256,6 +233,27 @@ export function Contact() {
                     </p>
                   </div>
                 </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/posts/sarvsmit-global-enterprise-private-limited_fmcg-consumerinsights-foodindustry-activity-7496474504546877441-LJ0T"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Sarvsmit Global Enterprise on LinkedIn"
+                  className="metallic-card group flex items-start gap-3.5 sm:gap-4 rounded-xl p-4 transition-all duration-300 hover:border-[#8a9cb5]"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#b8c4d6] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors group-hover:border-[#96a4b8] group-hover:bg-white">
+                    <LinkedInIcon strokeWidth={1.5} className="h-4.5 w-4.5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
+                      LinkedIn
+                    </span>
+                    <p className="mt-0.5 text-xs sm:text-sm font-medium text-black transition-colors">
+                      Sarvsmit Global Enterprise
+                    </p>
+                  </div>
+                </a>
               </div>
             </motion.div>
 
@@ -272,7 +270,7 @@ export function Contact() {
                 {submitted ? (
                   <div className="py-10 sm:py-12 text-center">
                     <div className="mx-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-600">
-                      <CheckCircle2 className="h-7 w-7 sm:h-8 sm:w-8" />
+                      <CheckCircle2 strokeWidth={1.5} className="h-7 w-7 sm:h-8 sm:w-8" />
                     </div>
                     <h4 className="mt-5 sm:mt-6 font-serif text-xl sm:text-2xl md:text-3xl font-bold text-black">
                       Enquiry Details Captured
@@ -290,7 +288,7 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="mt-6 sm:mt-8 text-xs uppercase tracking-[0.2em] text-[#4d5666] hover:text-black transition-colors font-semibold"
+                      className="mt-6 sm:mt-8 text-xs uppercase tracking-wider text-[#4d5666] hover:text-black transition-colors font-semibold"
                     >
                       Submit Another Enquiry
                     </button>
@@ -377,9 +375,9 @@ export function Contact() {
                       <Button
                         type="submit"
                         variant="primary"
-                        className="w-full sm:w-auto px-8 py-3.5 sm:px-10 sm:py-4 text-xs font-bold tracking-[0.2em] justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
+                        className="w-full sm:w-auto px-8 py-3.5 sm:px-10 sm:py-4 text-xs font-semibold tracking-wider justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
                       >
-                        <Send className="mr-2 h-3.5 w-3.5" />
+                        <Send strokeWidth={1.5} className="mr-2 h-3.5 w-3.5" />
                         <span>Send Enquiry</span>
                       </Button>
                     </div>

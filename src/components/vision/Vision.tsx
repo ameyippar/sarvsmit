@@ -63,7 +63,7 @@ export function Vision() {
           whileInView="visible"
           viewport={viewport}
           transition={{ duration: duration.slow, delay: 0.1, ease: "easeOut" }}
-          className="mt-6 sm:mt-8 mx-auto max-w-5xl font-serif text-[32px] sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-black"
+          className="mt-6 sm:mt-8 mx-auto max-w-5xl font-serif text-[28px] xs:text-[32px] sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-black"
         >
           Building the Future of FMCG Innovation
         </motion.h2>

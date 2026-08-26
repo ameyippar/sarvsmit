@@ -122,7 +122,7 @@ export function Hero() {
               initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: duration.slow, delay: 0.14, ease }}
-              className="mt-5 sm:mt-6 font-serif text-[32px] sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-medium leading-[1.08] tracking-tight text-black"
+              className="mt-5 sm:mt-6 font-serif text-[28px] xs:text-[34px] sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-medium leading-[1.08] tracking-tight text-black"
             >
               Developing the best products from{" "}
               <span className="metallic-text italic font-normal">
@@ -212,7 +212,7 @@ export function Hero() {
             transition={{ duration: duration.slow, delay: 0.2, ease }}
             className="w-full lg:col-span-5 xl:col-span-4 flex flex-col items-center justify-center relative mt-6 lg:mt-0"
           >
-            <div className="relative w-full max-w-[300px] xs:max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] mx-auto flex flex-col items-center">
+            <div className="relative w-full max-w-[280px] xs:max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] mx-auto flex flex-col items-center">
               {/* Glowing Halo Backdrop */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white via-[#b8c6dc]/40 to-transparent blur-2xl -z-10" />
               

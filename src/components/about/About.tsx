@@ -207,10 +207,10 @@ export function About() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-start sm:items-center gap-3.5">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/15 bg-black text-white shadow-[0_2px_10px_rgba(0,0,0,0.15)]">
-                  <ArrowRight className="h-4.5 w-4.5" />
+                  <ArrowRight strokeWidth={1.5} className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#4d5666]">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#4d5666]">
                     The Strategic Outcome
                   </span>
                   <p className="font-serif text-xl sm:text-2xl lg:text-3xl font-medium tracking-tight text-black mt-0.5">
@@ -220,7 +220,7 @@ export function About() {
               </div>
 
               <div className="metallic-badge inline-flex items-center gap-2 self-start sm:self-center rounded-full px-4 py-1.5 text-xs text-black font-semibold shrink-0">
-                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
+                <CheckCircle2 strokeWidth={1.5} className="h-3.5 w-3.5 text-emerald-600" />
                 <span>Ideation to Scale</span>
               </div>
             </div>

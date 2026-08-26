@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Mail, Phone, Globe } from "lucide-react";
+import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { Container } from "@/components/ui";
 import { LogoMark } from "@/components/brand/LogoMark";
 
@@ -20,37 +21,29 @@ const serviceLinks = [
 ];
 
 const exploreLinks = [
-  { label: "Cultured Cookie Co. ↗", href: "https://www.culturedcookieco.com/", isExternal: true },
-  { label: "Categories", href: "#categories" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Who We Work With", href: "#who-we-work-with" },
+  { label: "Commercial Case Studies", href: "#case-studies" },
+  { label: "Flagship Venture", href: "https://culturedcookieco.com", isExternal: true },
+  { label: "Client Segments", href: "#clients" },
+  { label: "Commercial Viability Gates", href: "#gates" },
 ];
 
 export function Footer() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal?: boolean) => {
     if (isExternal) return;
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      const targetId = href.replace("#", "");
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      } else {
-        window.location.hash = href;
-      }
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-[#d4dce8] via-[#cad2df] to-[#beccd8] text-black pt-20 pb-12 border-t border-[#a8b8cc]">
-      {/* Subtle top divider lighting */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-80" />
-
+    <footer className="relative overflow-hidden bg-gradient-to-b from-[#ced6e4] via-[#dfe5ef] to-[#cfd7e5] pt-16 pb-12 sm:pt-20 sm:pb-16 border-t border-[#b8c4d6]/60">
       <Container>
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 pb-16">
-          {/* Brand Col (4 cols) */}
-          <div className="lg:col-span-4">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 pb-14 sm:pb-16">
+          {/* Brand Col (4 cols on lg) */}
+          <div className="sm:col-span-2 lg:col-span-4">
             <Link
               href="#home"
               onClick={(e) => handleNavClick(e, "#home")}
@@ -60,10 +53,10 @@ export function Footer() {
                 <LogoMark className="h-7 w-7 drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-serif text-base font-bold tracking-[0.24em] text-black">
+                <span className="font-sans text-base font-bold tracking-wider text-black">
                   SARVSMIT
                 </span>
-                <span className="mt-1 text-[9px] font-bold tracking-[0.34em] text-[#4d5666] uppercase">
+                <span className="mt-1 text-[9.5px] font-semibold tracking-wider text-[#4d5666] uppercase">
                   GLOBAL ENTERPRISE
                 </span>
               </div>
@@ -80,7 +73,7 @@ export function Footer() {
 
           {/* Col 1: Company (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+            <span className="text-xs font-semibold uppercase tracking-wider text-black">
               Company
             </span>
             <ul className="mt-5 space-y-3" role="list">
@@ -172,6 +165,18 @@ export function Footer() {
                 >
                   <Globe strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
                   <span>sarvsmitglobalenterprise.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/posts/sarvsmit-global-enterprise-private-limited_fmcg-consumerinsights-foodindustry-activity-7496474504546877441-LJ0T"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Sarvsmit Global Enterprise on LinkedIn"
+                  className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-black"
+                >
+                  <LinkedInIcon strokeWidth={1.5} className="h-3.5 w-3.5 shrink-0 text-[#4d5666]" />
+                  <span>LinkedIn</span>
                 </a>
               </li>
             </ul>

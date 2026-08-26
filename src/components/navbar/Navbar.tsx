@@ -257,13 +257,13 @@ export function Navbar() {
         <div className="flex items-center lg:hidden">
           <button
             type="button"
-            className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#b8c2d1] bg-white/70 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors hover:bg-white"
+            className="relative inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#b8c2d1] bg-white/80 text-black shadow-[inset_0_1px_0_#ffffff] transition-colors hover:bg-white"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((prev) => !prev)}
           >
-            {open ? <X size={17} /> : <Menu size={17} />}
+            {open ? <X size={18} strokeWidth={1.5} /> : <Menu size={18} strokeWidth={1.5} />}
           </button>
         </div>
       </div>
