@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  UserCheck,
-  TrendingUp,
-  Target,
-  Zap,
-  Boxes,
-  HeartHandshake,
+  Users,
+  Factory,
   Sparkles,
+  Timer,
+  Layers,
+  Scale,
   ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui";
@@ -18,39 +17,45 @@ import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 const differentiators = [
   {
     step: "01",
-    title: "Founder-Led Innovation",
-    description: "Hands-on strategic and technical involvement.",
-    icon: UserCheck,
+    title: "Founder & Scientist Led",
+    description:
+      "Direct, hands-on involvement from experienced food developers and founders who have formulated, launched, and scaled real FMCG brands.",
+    icon: Users,
   },
   {
     step: "02",
-    title: "Commercial-First Thinking",
-    description: "Products engineered for manufacturing realities.",
-    icon: TrendingUp,
+    title: "Engineered for Plant Realities",
+    description:
+      "We formulate with commercial manufacturing lines in mind from day one—preventing expensive kitchen-to-plant trial surprises.",
+    icon: Factory,
   },
   {
     step: "03",
-    title: "Strategic Product Positioning",
-    description: "Building differentiated FMCG brands.",
-    icon: Target,
+    title: "Defensible Sensory Profiling",
+    description:
+      "Creating products with distinctive mouthfeel, aroma, and flavor architecture that stand out on crowded retail aisles.",
+    icon: Sparkles,
   },
   {
     step: "04",
-    title: "Agile Development",
-    description: "Faster iteration and execution cycles.",
-    icon: Zap,
+    title: "Agile Development Cycles",
+    description:
+      "Fast, focused prototype iterations and direct factory trial execution to get your product into retail distribution months faster.",
+    icon: Timer,
   },
   {
     step: "05",
-    title: "Cross-Category Expertise",
-    description: "Technical understanding across multiple food systems.",
-    icon: Boxes,
+    title: "Multi-Category Food Science",
+    description:
+      "Cross-disciplinary formulation expertise spanning slow-fermented bakery, functional beverages, confectionery, and better-for-you snacks.",
+    icon: Layers,
   },
   {
     step: "06",
-    title: "Innovation + Brand Understanding",
-    description: "Balancing technical performance with consumer perception.",
-    icon: HeartHandshake,
+    title: "Science Balanced with Unit Margins",
+    description:
+      "We balance culinary taste and shelf stability with viable raw ingredient costs and healthy distributor margin structures.",
+    icon: Scale,
   },
 ];
 
@@ -91,9 +96,8 @@ export function Differentiation() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Sparkles className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
-              Competitive Advantage
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+              Why Brands Work With Us
             </span>
           </motion.div>
 
@@ -105,7 +109,7 @@ export function Differentiation() {
             transition={{ duration: duration.base, delay: 0.1, ease }}
             className="mt-6 font-serif text-3xl font-medium leading-[1.12] tracking-tight text-black sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            What Makes Us Different?
+            What Makes Us Different
           </motion.h2>
         </div>
 
@@ -161,12 +165,12 @@ export function Differentiation() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-8 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                  <h3 className="mt-6 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                     {item.title}
                   </h3>
 
                   {/* Subtext */}
-                  <p className="mt-3.5 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
+                  <p className="mt-3 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
                     {item.description}
                   </p>
                 </div>

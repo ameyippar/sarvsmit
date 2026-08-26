@@ -10,79 +10,79 @@ import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 const failurePoints = [
   {
     number: "01",
-    title: "Weak product differentiation",
-    category: "Market Positioning",
+    title: "Unclear Market Differentiation",
+    category: "Product Positioning",
     severity: "High Risk",
-    impact: "Blends into crowded retail shelves without distinct sensory whitespace or competitive formulation advantage.",
+    impact: "Blends into crowded supermarket shelves without a distinct taste, texture profile, or clear reason for consumers to switch.",
   },
   {
     number: "02",
-    title: "Scaling formulations",
-    category: "R&D & Kitchen-to-Plant",
+    title: "Formulations That Fail at Scale",
+    category: "R&D & Plant Trials",
     severity: "Critical",
-    impact: "Kitchen-bench recipes collapse under industrial shear, continuous thermal loads, and commercial extruder pressure.",
+    impact: "A recipe perfected in small bowls separates, burns, or stiffens when subjected to industrial mixers, thermal cookers, and continuous extruders.",
   },
   {
     number: "03",
-    title: "Manufacturing inefficiencies",
+    title: "Factory Floor Scrap & Downtime",
     category: "Plant Operations",
     severity: "Operational",
-    impact: "Excessive line downtime, batch yield losses, slow throughput rates, and co-packer commissioning friction.",
+    impact: "Batter sticking to conveyors, nozzle clogging, and uneven bake cycles trigger slow line speeds, high batch scrap rates, and co-packer friction.",
   },
   {
     number: "04",
-    title: "Shelf-life instability",
-    category: "Quality & Preservation",
+    title: "Shelf-Life & Texture Breakdown",
+    category: "Quality & Freshness",
     severity: "Critical",
-    impact: "Moisture migration, lipid rancidity, and flavor staling before achieving full retail supply chain sell-through.",
+    impact: "Products lose their crunch, dry out, or develop off-flavors after just a few weeks in retail distribution warehouses without clean-label stabilizers.",
   },
   {
     number: "05",
-    title: "Poor commercialization planning",
+    title: "Rushed Commercial Readiness",
     category: "Go-To-Market",
     severity: "Strategic",
-    impact: "Fragmented co-packer handoffs, regulatory non-compliance, and missed distributor listing windows.",
+    impact: "Vague co-packer handover SOPs, missing nutritional or regulatory clearances, and missed retail distribution onboarding windows.",
   },
   {
     number: "06",
-    title: "Margin pressure",
+    title: "Eroded Unit Margins (COGS)",
     category: "Unit Economics",
     severity: "Financial",
-    impact: "Over-engineered ingredient specs and un-optimized bill-of-materials eliminating distributor margins.",
+    impact: "Overly expensive specialty ingredients or inefficient pack sizes eliminate distributor and retail margins, making sustainable growth impossible.",
   },
   {
     number: "07",
-    title: "Supplier inconsistency",
+    title: "Raw Material Batch Inconsistency",
     category: "Supply Chain",
-    severity: "Structural",
-    impact: "Raw ingredient batch variation altering final viscosity, bake snap, mouthfeel, and consumer sensory score.",
+    severity: "Quality Control",
+    impact: "Natural seasonal variations in agricultural ingredients alter final texture, snap, aroma, and consumer taste from one production batch to the next.",
   },
 ];
 
 const consequences = [
   {
     number: "01",
-    title: "Delayed launches",
+    title: "Delayed Retail Launches",
     badge: "Timeline Risk",
-    description: "Extended formulation cycles cause missed seasonal and retail shelf windows.",
+    description: "Extended formulation iterations cause brands to miss key seasonal sales and supermarket onboarding windows.",
   },
   {
     number: "02",
-    title: "Poor repeat purchase",
-    badge: "Consumer Retention",
-    description: "Sensory defects and texture degradation erode customer lifetime value.",
+    title: "Lost Repeat Customers",
+    badge: "Customer Retention",
+    description: "First-time buyers don't return when the packaged product delivered on shelves doesn't match the promise.",
   },
   {
     number: "03",
-    title: "Operational inefficiencies",
-    badge: "Process Waste",
-    description: "Sub-optimal line kinetics trigger high scrap rates and wasted capex.",
+    title: "High Production Waste",
+    badge: "Plant Waste",
+    description: "Uncalibrated factory line speeds and recipe trial errors trigger discarded batches and wasted working capital.",
   },
   {
     number: "04",
-    title: "Unsustainable unit economics",
+    title: "Shrinking Profit Margins",
     badge: "Financial Strain",
-    description: "Uncontrolled ingredient COGS undermine distributor margins and scale.",
+    description: "Unmanaged ingredient and co-packer processing costs squeeze gross margins before reaching sustainable scale.",
   },
 ];
 
@@ -146,12 +146,12 @@ export function Problem() {
               transition={{ duration: duration.base, ease }}
               className="flex items-center gap-3 border-b border-red-300/60 pb-3"
             >
-              <span className="font-mono text-xs font-bold tracking-[0.24em] text-red-700 uppercase">
-                {"//"} 02 · COMMERCIAL DIAGNOSTIC
+              <span className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/90 px-3 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.2em] text-red-700">
+                The Scaling Reality
               </span>
-              <span className="h-px flex-1 bg-gradient-to-r from-red-400/40 to-transparent" />
-              <span className="text-[10.5px] font-mono tracking-widest text-[#556072] uppercase hidden sm:inline">
-                SCALE BOTTLENECKS &amp; FRICTION VECTORS
+              <span className="h-px flex-1 bg-gradient-to-r from-red-300/40 to-transparent" />
+              <span className="text-xs font-semibold tracking-wider text-[#556072] hidden sm:inline">
+                Where FMCG Concepts Face Plant-Floor Friction
               </span>
             </motion.div>
 
@@ -163,7 +163,7 @@ export function Problem() {
               transition={{ duration: duration.base, delay: 0.1, ease }}
               className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight text-black"
             >
-              Most FMCG Products Fail Before Scale
+              Most Food Products Fail Before They Scale
             </motion.h2>
 
             <motion.p
@@ -174,7 +174,7 @@ export function Problem() {
               transition={{ duration: duration.base, delay: 0.15, ease }}
               className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-graphite/90 font-normal font-sans"
             >
-              Bridging the gap between kitchen concepts and factory-floor realities. Without systematic formulation science and process engineering, standard brands encounter 7 predictable friction points.
+              Taking a recipe from test-kitchen benchtop to commercial factory production is where most food brands hit unexpected friction. Without targeted formulation science and plant-floor engineering, brands encounter 7 common scale barriers.
             </motion.p>
           </div>
 
@@ -189,8 +189,8 @@ export function Problem() {
           >
             <div className="rounded-2xl border border-[#b4c0d2] bg-gradient-to-br from-white/95 via-[#ebf0f8] to-[#d8e0ec] p-6 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,25,35,0.06),inset_0_1px_1px_#ffffff]">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
-                  Industry Diagnostic
+                <span className="text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                  Industry Reality
                 </span>
                 <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse" />
               </div>
@@ -203,7 +203,7 @@ export function Problem() {
                 </span>
               </div>
               <p className="mt-2 text-xs text-[#556072] leading-relaxed font-medium">
-                Caused by formulation instability, un-optimized line kinetics, and weak commercialization planning.
+                Products stumble during factory trials due to unexpected texture shifts, short shelf life, or unviable ingredient costs.
               </p>
             </div>
           </motion.div>
@@ -214,10 +214,10 @@ export function Problem() {
         {/* ========================================================= */}
         <div className="mt-14 sm:mt-18">
           <div className="mb-6 flex items-center justify-between">
-            <div className="flex items-center gap-2 font-mono">
+            <div className="flex items-center gap-2">
               <span className="text-xs font-bold text-red-700">01 — 07</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#4d5666]">
-                Critical Friction Points
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                Common Scale Barriers
               </span>
             </div>
             <div className="hidden h-px flex-1 bg-[#a8b6cb]/50 ml-6 sm:block" />
@@ -263,17 +263,17 @@ export function Problem() {
                       <span className="font-mono text-xs font-bold text-black">
                         {item.number}
                       </span>
-                      <span className="rounded-full border border-red-300/70 bg-red-50/80 px-2 py-0.5 text-[9px] font-mono font-bold uppercase tracking-wider text-red-700">
+                      <span className="rounded-full border border-red-300/70 bg-red-50/80 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-red-700">
                         {item.severity}
                       </span>
                     </div>
 
                     {/* Category & Title */}
                     <div className="mt-5">
-                      <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#556072]">
                         {item.category}
                       </span>
-                      <h3 className="mt-1 font-serif text-xl sm:text-[22px] font-bold leading-tight text-black transition-colors duration-200">
+                      <h3 className="mt-1 font-sans text-lg sm:text-[19px] font-bold leading-snug text-black transition-colors duration-200">
                         {item.title}
                       </h3>
                     </div>
@@ -286,7 +286,7 @@ export function Problem() {
 
                   {/* Card Bottom Progress Accent */}
                   <div className="mt-5 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] uppercase tracking-wider text-[#5c6778] font-bold">
-                    <span>Barrier {item.number}</span>
+                    <span>Friction Point {item.number}</span>
                     <span className="h-1.5 w-1.5 rounded-full bg-red-600/40 group-hover:bg-red-600 transition-colors" />
                   </div>
                 </motion.div>
@@ -302,8 +302,8 @@ export function Problem() {
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <span className="h-2.5 w-2.5 rounded-full bg-red-600 animate-pulse" />
-              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-black">
-                The Downstream Consequences
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-black">
+                The Downstream Consequences of Unplanned Scale
               </span>
             </div>
             <div className="hidden h-px flex-1 bg-[#a8b6cb]/50 ml-6 sm:block" />
@@ -328,13 +328,13 @@ export function Problem() {
                     <span className="font-mono text-xs font-bold text-red-700">
                       {item.number}
                     </span>
-                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[9.5px] font-mono font-bold uppercase tracking-[0.14em] text-red-700">
+                    <span className="rounded-full border border-red-300/80 bg-red-50 px-2.5 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.14em] text-red-700">
                       {item.badge}
                     </span>
                   </div>
 
                   <div className="mt-5">
-                    <h4 className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-black">
+                    <h4 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-black">
                       {item.title}
                     </h4>
                     <p className="mt-2.5 text-xs text-[#495362] leading-relaxed font-medium">

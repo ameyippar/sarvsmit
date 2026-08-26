@@ -185,8 +185,7 @@ export function Contact() {
               className="lg:col-span-5"
             >
               <div className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm">
-                <Sparkles className="h-3 w-3 text-metal" />
-                <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
+                <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
                   Direct Inquiries
                 </span>
               </div>

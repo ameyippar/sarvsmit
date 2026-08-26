@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  TrendingUp,
+  Boxes,
   RotateCcw,
-  Factory,
-  DollarSign,
+  Settings2,
+  Scale,
+  Users,
   ShieldCheck,
-  Leaf,
   ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui";
@@ -17,39 +17,39 @@ import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 const gates = [
   {
     gate: "01",
-    title: "Scalability",
-    criterion: "10x volume without reformulation or capex spikes",
-    icon: TrendingUp,
+    title: "Volume Scalability",
+    criterion: "Able to scale production 10x without recipe reformulation or custom equipment overhauls.",
+    icon: Boxes,
   },
   {
     gate: "02",
-    title: "Repeatability",
-    criterion: "<1% batch variance across contract manufacturers",
+    title: "Batch Repeatability",
+    criterion: "Strict consistency tolerances across different production runs and co-packer facilities.",
     icon: RotateCcw,
   },
   {
     gate: "03",
-    title: "Manufacturing Practicality",
-    criterion: "Compatible with standard Indian production lines",
-    icon: Factory,
+    title: "Plant Line Practicality",
+    criterion: "Engineered to run seamlessly on standard commercial food manufacturing and packaging lines.",
+    icon: Settings2,
   },
   {
     gate: "04",
-    title: "Cost Efficiency",
-    criterion: "15-30% lower COGS vs. comparable imported benchmarks",
-    icon: DollarSign,
+    title: "Healthy Unit Economics",
+    criterion: "Target COGS structured to deliver healthy gross margins across distributors and retail tiers.",
+    icon: Scale,
   },
   {
     gate: "05",
-    title: "Consumer Validation",
-    criterion: "Consumer panels confirming differentiation over incumbents",
-    icon: ShieldCheck,
+    title: "Consumer Taste Preference",
+    criterion: "Rigorous blind sensory panels confirming consumer preference and repeat purchase appeal over incumbents.",
+    icon: Users,
   },
   {
     gate: "06",
-    title: "Long-term Sustainability",
-    criterion: "18+ month shelf life with clean-label ingredients",
-    icon: Leaf,
+    title: "Ambient Shelf Stability",
+    criterion: "12 to 18+ months of real-world ambient shelf life verified through accelerated stability testing.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -90,8 +90,7 @@ export function SixGates() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <ShieldCheck className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
               Commercial Verification Protocol
             </span>
           </motion.div>
@@ -115,7 +114,7 @@ export function SixGates() {
             transition={{ duration: duration.base, delay: 0.2, ease }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-graphite/90 sm:text-xl font-normal font-sans"
           >
-            Sarvsmit focuses on a 6 Gate Strategy before reaching every consumer
+            Every product formulation must clear 6 rigorous commercial viability gates before moving to consumer shelves.
           </motion.p>
         </div>
 
@@ -156,7 +155,7 @@ export function SixGates() {
                 <div>
                   {/* Gate Label & Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-[#b8c2d1]/70 bg-white/70 px-2.5 py-0.5 font-mono text-[11px] font-bold text-[#5c6778] transition-colors group-hover:text-black">
+                    <div className="inline-flex items-center gap-1.5 rounded-full border border-[#b8c2d1]/70 bg-white/70 px-2.5 py-0.5 font-mono text-[11px] font-bold text-[#5c6778] transition-colors group-hover:text-black">
                       <span>GATE</span>
                       <span>{item.gate}</span>
                     </div>
@@ -173,13 +172,13 @@ export function SixGates() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-8 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                  <h3 className="mt-6 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                     {item.title}
                   </h3>
 
                   {/* Criterion Quote */}
-                  <p className="mt-3.5 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
-                    &ldquo;{item.criterion}&rdquo;
+                  <p className="mt-3 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
+                    {item.criterion}
                   </p>
                 </div>
 

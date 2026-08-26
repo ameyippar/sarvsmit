@@ -66,12 +66,12 @@ export function Capabilities() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="font-mono text-xs font-bold tracking-[0.24em] text-black uppercase">
-              {"//"} 05 · R&amp;D &amp; INDUSTRIAL CAPABILITIES
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+              Technical Capabilities
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
-            <span className="text-[10.5px] font-mono tracking-widest text-[#556072] uppercase hidden sm:inline">
-              PILOT TESTING · CO-PACKER INTEGRATION · EPS &amp; CCM
+            <span className="text-xs font-semibold tracking-wider text-[#556072] hidden sm:inline">
+              Formulation Chemistry · Plant Pilot Runs · Turnkey Integration
             </span>
           </motion.div>
 
@@ -92,8 +92,8 @@ export function Capabilities() {
           {/* 9 Capabilities Grid */}
           <div className="lg:col-span-8">
             <div className="mb-6 flex items-center justify-between">
-              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[#4d5666]">
-                Core Competencies (01 — 09)
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+                Core Competencies
               </span>
               <div className="h-px flex-1 bg-[#a8b6cb]/50 ml-6" />
             </div>

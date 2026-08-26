@@ -5,11 +5,10 @@ import { motion, useReducedMotion } from "framer-motion";
 import {
   Compass,
   Users,
-  Cpu,
+  FlaskConical,
   Scale,
-  Rocket,
+  Store,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import { Container } from "@/components/ui";
 import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
@@ -17,33 +16,33 @@ import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 const approachSteps = [
   {
     step: "01",
-    title: "Market Understanding",
+    title: "Market Insights",
     icon: Compass,
-    descriptor: "Landscape & Dynamics",
+    descriptor: "Category Whitespace",
   },
   {
     step: "02",
-    title: "Consumer Understanding",
+    title: "Consumer Demand",
     icon: Users,
-    descriptor: "Preferences & Demands",
+    descriptor: "Taste & Preferences",
   },
   {
     step: "03",
-    title: "Technical Execution",
-    icon: Cpu,
-    descriptor: "Formulation & Process",
+    title: "Technical Science",
+    icon: FlaskConical,
+    descriptor: "Formulation & Chemistry",
   },
   {
     step: "04",
-    title: "Commercial Viability",
+    title: "Unit Economics",
     icon: Scale,
-    descriptor: "Economics & Feasibility",
+    descriptor: "COGS & Feasibility",
   },
   {
     step: "05",
-    title: "Go-To-Market",
-    icon: Rocket,
-    descriptor: "Launch & Commercial Scale",
+    title: "Commercial Launch",
+    icon: Store,
+    descriptor: "Factory Handover & Shelf",
   },
 ];
 
@@ -83,9 +82,8 @@ export function Approach() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Sparkles className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
-              Methodology
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+              Integrated Methodology
             </span>
           </motion.div>
 
@@ -115,7 +113,7 @@ export function Approach() {
         {/* 5-Step Process Visual Flow */}
         <div className="mt-16 sm:mt-20">
           <div className="mb-6 flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#4d5666]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
               Strategic Progression
             </span>
             <div className="hidden h-px flex-1 bg-[#a8b6cb]/50 ml-6 sm:block" />
@@ -172,7 +170,7 @@ export function Approach() {
                       </div>
 
                       {/* Step Title */}
-                      <h3 className="mt-7 font-serif text-xl font-bold tracking-tight text-black transition-colors duration-200">
+                      <h3 className="mt-6 font-sans text-lg font-bold tracking-tight text-black transition-colors duration-200">
                         {stepItem.title}
                       </h3>
                     </div>

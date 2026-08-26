@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import {
-  Search,
-  Target,
+  Compass,
+  LineChart,
   FlaskConical,
-  TrendingUp,
+  Factory,
   ShieldCheck,
-  Rocket,
-  Sparkles,
+  PackageCheck,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -20,80 +19,80 @@ const stages = [
   {
     step: "01",
     name: "Research",
-    icon: Search,
-    subtitle: "Discovery & Market Intelligence",
+    icon: Compass,
+    subtitle: "Market & Consumer Intelligence",
     details:
-      "Deep scientific and consumer category research, identifying ingredient innovations, competitive benchmarks, unmet market whitespace, and technical feasibility parameters.",
+      "Deep category analysis and consumer insight mapping to identify clean-label ingredient opportunities, benchmark competitive products, and pinpoint distinct white space.",
     deliverables: [
-      "Ingredient & Scientific Mapping",
-      "Consumer Sensory Demands",
-      "Competitive Benchmarking",
-      "Technical Whitespace Audit",
+      "Ingredient & Scientific Sourcing",
+      "Consumer Taste & Texture Demands",
+      "Competitive Product Benchmarking",
+      "Commercial Feasibility Audit",
     ],
   },
   {
     step: "02",
     name: "Strategy",
-    icon: Target,
-    subtitle: "Positioning & Target Economics",
+    icon: LineChart,
+    subtitle: "Product Architecture & Target COGS",
     details:
-      "Formulating differentiated product positioning, target cost-of-goods (COGS) architecture, nutritional targets, and commercial pathway roadmaps.",
+      "Formulating differentiated product positioning, target cost-of-goods (COGS) architecture, nutritional targets, and commercial pathway roadmaps before test kitchen trials.",
     deliverables: [
-      "Product Architecture Blueprint",
-      "COGS & Margin Modeling",
-      "Flavor & Nutritional Profiles",
-      "Commercial Feasibility Gates",
+      "Product Concept Blueprint",
+      "COGS & Distributor Margin Modeling",
+      "Flavor & Nutritional Profile Targets",
+      "Commercial Feasibility Milestones",
     ],
   },
   {
     step: "03",
     name: "Formulation",
     icon: FlaskConical,
-    subtitle: "Lab & Kitchen Bench Chemistry",
+    subtitle: "Test-Bench Recipe Development",
     details:
-      "Rapid iterative bench-top formulation, ingredient chemistry optimization, texture rheology design, sensory calibration, and initial stability validation.",
+      "Hands-on prototype formulation, clean-label ingredient synergy, texture calibration, sensory tasting panels, and initial room-temperature stability testing.",
     deliverables: [
       "Bench-Top Recipe Prototypes",
       "Sensory Calibration Rounds",
-      "Ingredient Synergy Optimization",
-      "Initial Stability Testing",
+      "Clean-Label Ingredient Balancing",
+      "Initial Shelf-Stability Testing",
     ],
   },
   {
     step: "04",
     name: "Scale Up",
-    icon: TrendingUp,
-    subtitle: "Plant Trials & Thermal Processing",
+    icon: Factory,
+    subtitle: "Plant Trials & Line Optimization",
     details:
-      "Translating bench formulations to factory-floor commercial line realities, verifying shear rates, thermal kinetics, continuous mixing, and line yield efficiency.",
+      "Translating kitchen formulations into factory-floor realities—verifying continuous industrial mixing, thermal bake curves, line speed, and batch yield efficiency.",
     deliverables: [
-      "Pilot Line Trial Batches",
-      "Process Parameter Standardization",
-      "Yield Optimization Protocol",
-      "Co-Manufacturer Qualification",
+      "Pilot Line Commercial Batches",
+      "Factory Processing Parameters",
+      "Batch Yield Optimization",
+      "Contract Manufacturer Qualification",
     ],
   },
   {
     step: "05",
     name: "Validation",
     icon: ShieldCheck,
-    subtitle: "Shelf-Life & Quality Assurance",
+    subtitle: "Shelf-Life & Food Safety QA",
     details:
-      "Rigorous accelerated shelf-life studies, microbiology testing, packaging barrier integrity verification, and regulatory compliance clearance.",
+      "Rigorous accelerated and real-time shelf-life testing, moisture migration barriers, microbiological food safety assurance, and FSSAI/regulatory compliance.",
     deliverables: [
       "Accelerated Shelf-Life Validation",
       "Packaging Barrier Optimization",
-      "Nutritional & Label Compliance",
+      "Nutritional Labeling & Compliance",
       "Quality Assurance SOPs",
     ],
   },
   {
     step: "06",
     name: "Commercialization",
-    icon: Rocket,
-    subtitle: "Market Readiness & Production SOPs",
+    icon: PackageCheck,
+    subtitle: "Factory Handover & Launch",
     details:
-      "Final handover of validated master formulations, complete factory operating procedures, supplier vendor locking, and launch readiness execution.",
+      "Final handover of validated master formulations, complete factory standard operating procedures (SOPs), vendor locking, and supervision of the first commercial run.",
     deliverables: [
       "Master Production SOP Manual",
       "Vendor Sourcing & Supply Locking",
@@ -140,9 +139,8 @@ export function InnovationFramework() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Sparkles className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
-              Execution Architecture
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+              Structured Methodology
             </span>
           </motion.div>
 
@@ -211,7 +209,7 @@ export function InnovationFramework() {
                   </div>
 
                   {/* Stage Name */}
-                  <h3 className="mt-8 font-serif text-lg sm:text-xl font-bold tracking-tight text-black transition-colors duration-200">
+                  <h3 className="mt-6 font-sans text-base sm:text-lg font-bold tracking-tight text-black transition-colors duration-200">
                     {stg.name}
                   </h3>
                 </div>
@@ -253,19 +251,19 @@ export function InnovationFramework() {
                 <div className="lg:col-span-7">
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#5c6778]">
-                      Stage {stages[selectedStage].step} of 06
+                      Phase 0{selectedStage + 1}
                     </span>
                     <span className="h-1 w-1 rounded-full bg-black/40" />
-                    <span className="text-xs uppercase tracking-[0.18em] text-black font-bold">
+                    <span className="text-xs uppercase tracking-[0.16em] text-black font-bold">
                       {stages[selectedStage].subtitle}
                     </span>
                   </div>
 
-                  <h4 className="mt-4 font-serif text-3xl sm:text-4xl font-bold tracking-tight text-black">
+                  <h4 className="mt-3 font-sans text-2xl sm:text-3xl font-bold tracking-tight text-black">
                     {stages[selectedStage].name}
                   </h4>
 
-                  <p className="mt-4 text-base leading-relaxed text-graphite/90 sm:text-lg font-normal">
+                  <p className="mt-3 text-base leading-relaxed text-graphite/90 sm:text-lg font-normal">
                     {stages[selectedStage].details}
                   </p>
                 </div>

@@ -5,10 +5,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import {
   Compass,
   FlaskConical,
-  Cpu,
-  Rocket,
+  Factory,
+  Store,
   ArrowRight,
-  Sparkles,
   CheckCircle2,
 } from "lucide-react";
 import { Container } from "@/components/ui";
@@ -18,57 +17,56 @@ const stages = [
   {
     id: "ideation",
     step: "01",
-    phase: "IDEATION",
-    title: "Ideation",
+    phaseTag: "Discovery Phase",
+    title: "Concept Ideation",
     icon: Compass,
     items: [
-      "Consumer Insights",
-      "Market Trends",
-      "Concept Ideation",
-      "Opportunity Mapping",
+      "Consumer Insight Discovery",
+      "Retail Category Benchmarking",
+      "Sensory Whitespace Mapping",
+      "Ingredient Innovation Scouting",
     ],
   },
   {
     id: "product-development",
     step: "02",
-    phase: "PRODUCT DEVELOPMENT",
-    title: "Product Development",
+    phaseTag: "Formulation Phase",
+    title: "Product Formulation",
     icon: FlaskConical,
     items: [
-      "Formulation Innovation",
-      "Ingredient Research",
-      "Sensory & Stability Testing",
-      "Prototype Development",
-      "Pilot Trials",
+      "Kitchen-Bench Prototypes",
+      "Clean-Label Ingredient Balancing",
+      "Texture & Mouthfeel Optimization",
+      "Structured Sensory Tasting Panels",
+      "Initial Stability Verification",
     ],
   },
   {
     id: "process-development",
     step: "03",
-    phase: "PROCESS DEVELOPMENT",
-    title: "Process Development",
-    icon: Cpu,
+    phaseTag: "Manufacturing Phase",
+    title: "Process & Scale-Up",
+    icon: Factory,
     items: [
-      "Process Design",
-      "Scale-Up & Optimization",
-      "Quality & Safety Assurance",
-      "Cost & Efficiency Engineering",
-      "Supply Chain Readiness",
-      "Regulatory Compliance",
+      "Industrial Plant Line Feasibility",
+      "Thermal Processing & Continuous Mixing",
+      "Batch Yield & Scrap Optimization",
+      "Co-Packer Handover Procedures",
+      "Food Safety & FSSAI Compliance",
     ],
   },
   {
     id: "market-launch",
     step: "04",
-    phase: "MARKET LAUNCH",
+    phaseTag: "Commercialization Phase",
     title: "Market Launch",
-    icon: Rocket,
+    icon: Store,
     items: [
-      "Go-To-Market Strategy",
-      "Brand Positioning",
-      "Packaging Excellence",
-      "Market Activation",
-      "Consumer Engagement",
+      "Go-To-Market Execution Plan",
+      "Packaging Freshness & Barrier Selection",
+      "Distributor COGS & Margin Alignment",
+      "First Commercial Production Supervision",
+      "Retail Rollout Support",
     ],
   },
 ];
@@ -109,9 +107,8 @@ export function InnovationProcess() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Sparkles className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
-              End-to-End FMCG Innovation
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+              Lifecycle Execution
             </span>
           </motion.div>
 
@@ -123,7 +120,7 @@ export function InnovationProcess() {
             transition={{ duration: duration.base, delay: 0.1, ease }}
             className="mt-6 font-serif text-3xl font-medium leading-[1.12] tracking-tight text-black sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Innovating Today. Transforming Tomorrow.
+            From First Concept to Factory Floor
           </motion.h2>
 
           <motion.p
@@ -134,7 +131,7 @@ export function InnovationProcess() {
             transition={{ duration: duration.base, delay: 0.2, ease }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-graphite/90 sm:text-xl font-normal font-sans"
           >
-            Turning Ideas into Impact. Innovating Today. Leading Tomorrow.
+            A systematic four-phase process designed to take novel food concepts from test-bench prototypes to full retail readiness.
           </motion.p>
         </div>
 
@@ -161,7 +158,7 @@ export function InnovationProcess() {
                     {stg.step}
                   </span>
                   <span className="text-[11px] font-bold uppercase tracking-[0.16em] truncate">
-                    {stg.phase}
+                    {stg.title}
                   </span>
                 </div>
                 {idx < stages.length - 1 && (
@@ -209,7 +206,7 @@ export function InnovationProcess() {
                 <div>
                   {/* Stage Number & Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-[#b8c2d1]/70 bg-white/70 px-2.5 py-0.5 font-mono text-[11px] font-bold text-[#5c6778] transition-colors group-hover:text-black">
+                    <div className="inline-flex items-center gap-1.5 rounded-full border border-[#b8c2d1]/70 bg-white/70 px-2.5 py-0.5 font-mono text-[11px] font-bold text-[#5c6778] transition-colors group-hover:text-black">
                       <span>PHASE</span>
                       <span>{stage.step}</span>
                     </div>
@@ -227,10 +224,10 @@ export function InnovationProcess() {
 
                   {/* Stage Title */}
                   <div className="mt-6">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#4d5666]">
-                      {stage.phase}
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                      {stage.phaseTag}
                     </span>
-                    <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                    <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                       {stage.title}
                     </h3>
                   </div>
@@ -255,7 +252,7 @@ export function InnovationProcess() {
                 {/* Progress Indicator Footer */}
                 <div className="mt-8 pt-4 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] font-semibold tracking-wider text-[#4d5666]">
                   <span>
-                    Step {idx + 1} of {stages.length}
+                    Phase {idx + 1} of {stages.length}
                   </span>
                   <span className="h-1.5 w-1.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-125 transition-all" />
                 </div>

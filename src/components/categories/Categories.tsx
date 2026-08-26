@@ -119,8 +119,7 @@ export function Categories() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Layers className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
               Sector Expertise
             </span>
           </motion.div>
@@ -189,13 +188,13 @@ export function Categories() {
                   </div>
 
                   {/* Category Name */}
-                  <h3 className="mt-8 font-serif text-lg sm:text-xl font-bold tracking-tight text-black transition-colors duration-200">
+                  <h3 className="mt-6 font-sans text-base sm:text-lg font-bold tracking-tight text-black transition-colors duration-200">
                     {cat.name}
                   </h3>
                 </div>
 
                 {/* Subtag / Arrow */}
-                <div className="mt-4 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-[#4d5666] font-semibold transition-colors duration-300 group-hover:text-black">
+                <div className="mt-4 pt-3 border-t border-[#b8c2d1]/40 flex items-center justify-between text-[10.5px] font-semibold text-[#4d5666] transition-colors duration-300 group-hover:text-black">
                   <span>{cat.tag}</span>
                   <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-black" />
                 </div>

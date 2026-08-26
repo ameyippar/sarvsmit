@@ -6,7 +6,7 @@ import {
   Sparkles,
   FlaskConical,
   Factory,
-  Rocket,
+  Store,
   Check,
   ArrowUpRight,
   Layers,
@@ -22,10 +22,10 @@ const services = [
     icon: Sparkles,
     tagline: "Market-Defining Concepts",
     items: [
-      "Concept development",
-      "Product positioning",
-      "Flavor architecture",
-      "Functional innovation",
+      "Concept ideation & whitespace",
+      "Competitive product positioning",
+      "Sensory & flavor architecture",
+      "Clean-label functional innovation",
     ],
   },
   {
@@ -35,10 +35,10 @@ const services = [
     icon: FlaskConical,
     tagline: "Formulation Science & Texture",
     items: [
-      "Formulation development",
-      "Texture engineering",
-      "Shelf-life optimization",
-      "Ingredient functionality",
+      "Bench-top recipe formulation",
+      "Texture & mouthfeel engineering",
+      "Shelf-life & stability testing",
+      "Functional ingredient chemistry",
     ],
   },
   {
@@ -48,22 +48,25 @@ const services = [
     icon: Factory,
     tagline: "Plant-Floor Integration",
     items: [
-      "Process optimization",
-      "Pilot commercialization",
-      "Factory integration",
-      "Yield optimization",
-      "Packaging systems",
-      "Cost optimization",
-      "Vendor sourcing",
+      "Continuous process optimization",
+      "Factory pilot run execution",
+      "Line speed & yield optimization",
+      "Packaging barrier systems",
+      "Raw ingredient vendor locking",
     ],
   },
   {
     id: "commercialization",
     number: "04",
     title: "Commercialization",
-    icon: Rocket,
+    icon: Store,
     tagline: "Market Execution",
-    items: ["Launch readiness"],
+    items: [
+      "Full launch readiness audit",
+      "Packaging & FSSAI regulatory compliance",
+      "First production run supervision",
+      "Turnkey manufacturing handover",
+    ],
   },
 ];
 
@@ -174,11 +177,11 @@ export function Services() {
                   </div>
 
                   {/* Title & Tagline */}
-                  <div className="mt-8">
+                  <div className="mt-6">
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4d5666]">
                       {service.tagline}
                     </span>
-                    <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                    <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                       {service.title}
                     </h3>
                   </div>

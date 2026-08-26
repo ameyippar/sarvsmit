@@ -51,9 +51,8 @@ export function Vision() {
           transition={{ duration: duration.base, ease: "easeOut" }}
           className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md"
         >
-          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-metal" />
-          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-black">
-            OUR VISION
+          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-black">
+            Our Long-Term Vision
           </span>
         </motion.div>
 

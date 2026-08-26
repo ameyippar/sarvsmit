@@ -97,12 +97,12 @@ export function About() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="font-mono text-xs font-bold tracking-[0.24em] text-black uppercase">
-              {"//"} 01 · INSTITUTIONAL PROFILE
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+              About Sarvsmit
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
-            <span className="text-[10.5px] font-mono tracking-widest text-[#556072] uppercase hidden sm:inline">
-              R&amp;D · PILOT SCALE · COMMERCIALIZATION
+            <span className="text-xs font-semibold tracking-wider text-[#556072] hidden sm:inline">
+              Formulation Science · Pilot Trials · Turnkey Commercialization
             </span>
           </motion.div>
 
@@ -125,15 +125,15 @@ export function About() {
             transition={{ duration: duration.base, delay: 0.18, ease }}
             className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed text-graphite/90 font-normal font-sans"
           >
-            Sarvsmit’s Consulting arm is a product innovation and commercialization consultancy focused on helping brands build scalable, differentiated FMCG products.
+            Sarvsmit is a product innovation and commercialization consultancy helping food and beverage brands build scalable, differentiated FMCG products from benchtop to store shelf.
           </motion.p>
         </div>
 
         {/* Five Disciplines Matrix (Bespoke Laboratory Specification Layout) */}
         <div className="mt-14 sm:mt-18">
           <div className="mb-6 flex items-center justify-between">
-            <span className="font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[#4d5666]">
-              Core Integrated Disciplines (01 — 05)
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#4d5666]">
+              Core Integrated Disciplines
             </span>
             <div className="hidden h-px flex-1 bg-[#a8b6cb]/50 ml-6 sm:block" />
           </div>
@@ -162,17 +162,17 @@ export function About() {
                       <span className="font-mono text-xs font-bold tracking-widest text-black">
                         {item.number}
                       </span>
-                      <span className="font-mono text-[9px] font-bold tracking-wider text-[#5c6778] uppercase">
+                      <span className="text-[10px] font-semibold tracking-wider text-[#5c6778] uppercase">
                         {item.benchmark}
                       </span>
                     </div>
 
                     {/* Discipline Title */}
                     <div className="mt-5">
-                      <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                      <span className="text-[9.5px] font-bold uppercase tracking-[0.18em] text-[#556072]">
                         {item.tag}
                       </span>
-                      <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                      <h3 className="mt-1 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                         {item.title}
                       </h3>
                     </div>

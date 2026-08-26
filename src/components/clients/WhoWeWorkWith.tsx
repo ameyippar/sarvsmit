@@ -3,12 +3,11 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  Rocket,
+  Lightbulb,
   Factory,
   Building2,
   UtensilsCrossed,
   Globe,
-  Sparkles,
   ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui";
@@ -17,32 +16,32 @@ import { duration, ease, fadeUp, stagger, viewport } from "@/lib/motion";
 const clientSegments = [
   {
     step: "01",
-    title: "Startups",
-    description: "Building first-generation FMCG brands from zero to shelf",
-    icon: Rocket,
+    title: "Challenger Startups",
+    description: "Helping first-generation founders take kitchen concepts to retail-ready production.",
+    icon: Lightbulb,
   },
   {
     step: "02",
-    title: "Manufacturers",
-    description: "Improving production systems, formulations & yield",
+    title: "Contract Manufacturers",
+    description: "Upgrading plant line formulations, reducing batch scrap, and optimizing processing yield.",
     icon: Factory,
   },
   {
     step: "03",
-    title: "FMCG Companies",
-    description: "New product innovation & category expansion pipelines",
+    title: "FMCG Enterprises",
+    description: "Accelerating new product pipelines, functional line extensions, and category entries.",
     icon: Building2,
   },
   {
     step: "04",
-    title: "QSR Brands",
-    description: "Scalable menu systems engineered for consistency",
+    title: "QSR & Multi-Outlets",
+    description: "Engineering central kitchen sauces, bakes, and bases for consistent multi-store scale.",
     icon: UtensilsCrossed,
   },
   {
     step: "05",
     title: "International Brands",
-    description: "India market entry, localization & compliance",
+    description: "Formulating for Indian palate preferences, local ingredient sourcing, and FSSAI compliance.",
     icon: Globe,
   },
 ];
@@ -84,9 +83,8 @@ export function WhoWeWorkWith() {
             transition={{ duration: duration.base, ease }}
             className="metallic-badge inline-flex items-center gap-2 rounded-full px-3.5 py-1 backdrop-blur-sm"
           >
-            <Sparkles className="h-3 w-3 text-metal" />
-            <span className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-black">
-              Partnership Profiles
+            <span className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-black">
+              Client &amp; Partner Profiles
             </span>
           </motion.div>
 
@@ -109,7 +107,7 @@ export function WhoWeWorkWith() {
             transition={{ duration: duration.base, delay: 0.2, ease }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-graphite/90 sm:text-xl font-normal font-sans"
           >
-            Our client segments span the full food & beverage value chain.
+            Our clients span the full consumer food ecosystem—from high-growth startup founders to global food enterprises.
           </motion.p>
         </div>
 
@@ -165,13 +163,13 @@ export function WhoWeWorkWith() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-8 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                  <h3 className="mt-6 font-sans text-xl font-bold tracking-tight text-black transition-colors duration-300">
                     {item.title}
                   </h3>
 
                   {/* Subtext */}
-                  <p className="mt-3.5 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
-                    &ldquo;{item.description}&rdquo;
+                  <p className="mt-3 text-sm leading-relaxed text-graphite/90 transition-colors duration-300 font-medium">
+                    {item.description}
                   </p>
                 </div>
 

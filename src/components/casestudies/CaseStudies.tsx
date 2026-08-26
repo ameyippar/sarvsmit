@@ -99,12 +99,12 @@ export function CaseStudies() {
             transition={{ duration: duration.base, ease }}
             className="flex items-center gap-3 border-b border-[#a8b8cc]/70 pb-3"
           >
-            <span className="font-mono text-xs font-bold tracking-[0.24em] text-black uppercase">
-              {"//"} 06 · VENTURE INCUBATION &amp; PLATFORMS
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#a8b8cc] bg-white/80 px-3.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.2em] text-black">
+              Proven Platforms
             </span>
             <span className="h-px flex-1 bg-gradient-to-r from-[#8a9bb2]/60 to-transparent" />
-            <span className="text-[10.5px] font-mono tracking-widest text-[#556072] uppercase hidden sm:inline">
-              FORMULATION · SCALE-UP · COMMERCIAL REALIZATION
+            <span className="text-xs font-semibold tracking-wider text-[#556072] hidden sm:inline">
+              Formulation · Scale-Up · Commercial Realization
             </span>
           </motion.div>
 
@@ -195,7 +195,7 @@ export function CaseStudies() {
                     {study.isChildCompany ? (
                       <div>
                         <div className="flex items-center justify-between">
-                          <h3 className="font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                          <h3 className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-black transition-colors duration-300">
                             {study.title}
                           </h3>
                           <a
@@ -208,19 +208,19 @@ export function CaseStudies() {
                             <ExternalLink className="h-2.5 w-2.5" />
                           </a>
                         </div>
-                        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[#5c6778] mt-1">
+                        <p className="text-[11px] font-semibold tracking-wider text-[#5c6778] mt-1">
                           {study.subtitle}
                         </p>
                       </div>
                     ) : (
                       <div>
-                        <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#556072]">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#556072]">
                           {study.tag}
                         </span>
-                        <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-black transition-colors duration-300">
+                        <h3 className="mt-1 font-sans text-xl sm:text-2xl font-bold tracking-tight text-black transition-colors duration-300">
                           {study.title}
                         </h3>
-                        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[#5c6778] mt-1">
+                        <p className="text-[11px] font-semibold tracking-wider text-[#5c6778] mt-1">
                           {study.subtitle}
                         </p>
                       </div>
